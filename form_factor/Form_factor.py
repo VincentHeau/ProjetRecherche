@@ -17,6 +17,7 @@ from shapely.geometry import Polygon
 import numpy as np
 import matplotlib.pyplot as plt
 import math as ma
+import os
 
 
 
@@ -31,7 +32,7 @@ def coordonnees_loi_normale(mu, ecart_type):
     return (x,y)
 
 
-def coordonnees_loi_normale_vincent(mu, ecart_type): 
+def coordonnees_loi_normale_v2(mu, ecart_type): 
     normale = abs(np.random.normal(mu,ecart_type,1)[0]) 
     y = np.random.normal(mu,ecart_type,1)[0]
     
@@ -65,6 +66,19 @@ def ouvre_json(fichier):
 
 
 def ecrit_json(data,fichier):
+    """
+    Fonction qui écrit un fichier JSON à partir d'un dictionnaire et d'un fichier
+    ----------
+    data : dict
+        contenu du fichier JSON
+    fichier : fichier
+        le fichier dans lequel on écrit data
+
+    Returns
+    -------
+    None.
+
+    """
     
     with open(fichier,'w') as mon_fichier:
        json.dump(data,mon_fichier)
@@ -72,6 +86,24 @@ def ecrit_json(data,fichier):
     
 
 def changement_sommet(data,mu,ecart_type):
+    """
+    
+    Fonction qui modifie le jeu de données JSON en changeant la géométrie des objets selon une loi 
+    normale
+    ----------
+    data : dict
+        contenu JSON
+    mu : float
+        moyenne de la loi normale
+    ecart_type : float
+        ecart-type de la loi normale
+
+    Returns
+    -------
+    m : float
+        La moyenne du form factor de la couche des batiments
+
+    """
     
         
     ### Ajout du champ FormFactor
@@ -109,7 +141,7 @@ def changement_sommet(data,mu,ecart_type):
                 
                 #x= rd.randint(1,3)
                 #y= rd.randint(1,3)
-                (a,b)=coordonnees_loi_normale_vincent(mu,ecart_type)
+                (a,b)=coordonnees_loi_normale(mu,ecart_type)
                 
                 data['features'][i]['geometry']['rings'][j][k][0]+=a
                 data['features'][i]['geometry']['rings'][j][k][1]+=b
@@ -149,32 +181,76 @@ def changement_sommet(data,mu,ecart_type):
     
     return m
 
- 
-if __name__ == '__main__':
+
+def analyse_loiNormale(fichier,X,sigma,nb_tirages):
+    """
+    Fonction qui effectue l'analyse de sensibilité selon la loi normale
+    ----------
+    fichier : file
+        fichier json
+        
+    X : list
+        Ensemble des valeurs prises par l'erreur moyenne mu'
+        
+        
+    sigma : float
+         ecart-type
     
-    
-    fichier='zoneMixte.json'
-    data_initial=ouvre_json(fichier)
-    
+    nb_tiarges : int
+         nombre de tirages effectués pour chaque mu
+
+    Returns list
+    -------
+    list des moyennes du form factor
+
+    """
+    #Moyenne avec mu=0 et sigma=0    
     moy=changement_sommet(ouvre_json(fichier),0,0)
     
+    
     listeF =[]
-    X=[i/10 for i in range(20)]
-    for k in X: 
-        listeFormFactor =[]
+    
+    for k in X:
+        #On fait varier la moyenne k (erreur en moyenne )
+        listeFormFactor=[]
         
-        for i in range(40):
-            MOY=changement_sommet(ouvre_json(fichier),k,0.15)
+        for i in range(nb_tirages):
+            # On prend nb_tirages tirages aléatoires avec un ecart-type sigma
+            MOY=changement_sommet(ouvre_json(fichier),k,sigma)
             listeFormFactor.append(MOY)
+            ##on calcule pour chaque tirage la moyenne des facteurs de forme de la couche
                        
 
-        listeF.append(np.mean(listeFormFactor)) 
+        listeF.append(np.mean(listeFormFactor))
+        ## on fait la moyenne des résultats des tirages précédents pour chaque k
         print("fin tour avec mu=",k) 
 
 
     print(listeF)
     
     plt.plot(X,listeF)
+    plt.xlabel("Erreur moyenne mu en mètre")
+    plt.ylabel("Moyenne des facteurs de forme\n({0} tirages effectués à chaque mu )".format(nb_tirages))
+    plt.title("Evolution de la moyenne du facteur forme \nen fonction de l'erreur de position appliquée aux sommets des bâtiments.\n(loi normale(mu,{0}))".format(sigma))
+    plt.savefig("form_factor/Annexes/graphique_form_factor.png")
+    
+
+ 
+if __name__ == '__main__':
+    
+    os.chdir("..")
+        
+    fichier='Fichier_JSON/zoneMixte.json'
+    data_initial=ouvre_json(fichier)
+    
+    
+    ## Application de la loi binomiale    
+    X=[i/10 for i in range(70)]
+    analyse_loiNormale(fichier,X,0.15,10)
+    
+    
+    
+    
    
 """
 fichier='testt_FeaturesToJSON3.json'
