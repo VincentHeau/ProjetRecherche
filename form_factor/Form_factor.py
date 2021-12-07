@@ -234,20 +234,31 @@ def analyse_loiNormale(fichier,X,sigma,nb_tirages):
     plt.title("Evolution de la moyenne du facteur forme \nen fonction de l'erreur de position appliquée aux sommets des bâtiments.\n(loi normale(mu,{0}))".format(sigma))
     plt.savefig("form_factor/Annexes/graphique_form_factor.png")
     
+    return listeF
 
  
 if __name__ == '__main__':
     
     os.chdir("..")
         
-    fichier='Fichier_JSON/zoneMixte.json'
-    data_initial=ouvre_json(fichier)
+    fichier1='Fichier_JSON/zoneMixte.json'
+    fichier2='Fichier_JSON/zoneCentre.json'
+    fichier3='Fichier_JSON/zonePeri.json'
+
     
-    
+    plt.figure(1)
     ## Application de la loi binomiale    
-    X=[i/10 for i in range(70)]
-    analyse_loiNormale(fichier,X,0.15,10)
-    
+    X=[i for i in range(10)]
+    #analyse_loiNormale(fichier,X,0.15,10)
+    plt.plot(X,analyse_loiNormale(fichier1,X,0.15,10),label='ZoneMixte')
+    plt.plot(X,analyse_loiNormale(fichier2,X,0.15,10),label='ZoneCentre')
+    plt.plot(X,analyse_loiNormale(fichier3,X,0.15,10),label='ZonePeri')
+    plt.legend()
+    plt.grid()
+    plt.xlabel("Erreur moyenne mu en mètre")
+    plt.ylabel("Moyenne des facteurs de forme\n(10 tirages effectués à chaque mu )")
+    plt.title("Evolution de la moyenne du facteur forme \nen fonction de l'erreur de position appliquée aux sommets des bâtiments.\n(loi normale(mu,0;15))")
+    plt.savefig("form_factor/Annexes/graphique_form_factor.png")
     
     
     
