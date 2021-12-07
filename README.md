@@ -21,4 +21,4 @@ Les logiciels et ressource suivantes ont été utilisés pour le développement 
 
 * **Vincent Heau** [VincentHeau](https://github.com/VincentHeau)
 * **Tristan Fillon**
-* **Félix Bal**
+* **Félix Bal** [fe73](https://github.com/fe73)
