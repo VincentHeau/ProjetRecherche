@@ -39,6 +39,7 @@ if __name__ == '__main__':
     MU1=[i/100 for i in range(20)]
     MU2=[i/10 for i in range(100)]
     
+    SI=[i/100 for i in range(15)]
     MU=[i/20 for i in range(100)]
     
     Volume_INITIAL=V.volume_total(data1)
@@ -46,19 +47,19 @@ if __name__ == '__main__':
     
     List_ERREUR=[]
     
-    v=len(T)*len(MU)
+    v=len(SI)*len(MU)
     w=0
     
     for m in MU:
         print('-- --')
         l=[]
-        for t in T:
+        for s in SI:
             w+=1
             print("{} %".format(round((w/v)*100,3)))
             Volume_NV=0
             for _ in range(10):
                 data1=tt.ouvre_json(fichier1)
-                incre=rc.calcul_volume_nv(data1,t,m,0.15,m,0.15,7)
+                incre=rc.calcul_volume_nv(data1,0,m,s,m,s,7)
                 Volume_NV+=incre
             Volume_NV/=10
             TAUX_ERREUR=rc.taux_erreur(Volume_INITIAL,Volume_NV)
