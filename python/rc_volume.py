@@ -25,7 +25,7 @@ from mpl_toolkits.mplot3d import axes3d  # Fonction pour la 3D
 
 
 def taux_erreur(volume_ini,volume_nv):
-    return (volume_ini-volume_nv)/volume_ini
+    return (abs(volume_ini-volume_nv))/volume_ini
 
 
 
