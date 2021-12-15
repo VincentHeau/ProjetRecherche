@@ -58,7 +58,7 @@ if __name__ == '__main__':
             Volume_NV=0
             for _ in range(10):
                 data1=tt.ouvre_json(fichier1)
-                incre=rc.calcul_volume_nv(data1,t,m,0.15,m,0.15)
+                incre=rc.calcul_volume_nv(data1,t,m,0.15,m,0.15,7)
                 Volume_NV+=incre
             Volume_NV/=10
             TAUX_ERREUR=rc.taux_erreur(Volume_INITIAL,Volume_NV)

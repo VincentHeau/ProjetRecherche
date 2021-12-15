@@ -29,7 +29,7 @@ def taux_erreur(volume_ini,volume_nv):
 
 
 
-def calcul_volume_nv(data,t,mu_g,sigma_g,mu_h,sigma_h):
+def calcul_volume_nv(data,t,mu_g,sigma_g,mu_h,sigma_h,borne):
     """
     Fonction qui calcule le nouveau volume en prennant en compte les différentes perturbations
     ----------
@@ -57,7 +57,7 @@ def calcul_volume_nv(data,t,mu_g,sigma_g,mu_h,sigma_h):
 
     # Perturbation qui consiste à modifier la géométrie
     ### paramètres qui varient (mu_g et sigma_g )
-    data=md.changement_sommet(data,mu_g,sigma_g)
+    data=md.changement_sommet(data,mu_g,sigma_g,borne)
     
     
     # Perturbation qui consiste à modifier la géométrie

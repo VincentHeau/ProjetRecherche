@@ -10,10 +10,12 @@ import numpy as np
 import random
 
 
-def coordonnees_loi_normale(mu, ecart_type): 
+def coordonnees_loi_normale(mu, ecart_type,borne): 
     normale = np.random.normal(mu,ecart_type,1)[0] 
     if normale<0: 
         normale = 0 
+    if normale>borne:
+        normale=borne
     teta = np.random.uniform(-np.pi,np.pi) 
     x = normale * np.sin(teta) 
     y = normale * np.cos(teta) 
@@ -40,7 +42,7 @@ def coordonnees_loi_normale_v2(mu, ecart_type):
     y = normale * np.cos(teta) 
     return (x,y)
 
-def changement_sommet(data,mu,ecart_type):
+def changement_sommet(data,mu,ecart_type,borne):
     """
     
     Fonction qui modifie le jeu de données JSON en changeant la géométrie des objets selon une loi 
@@ -71,10 +73,12 @@ def changement_sommet(data,mu,ecart_type):
                 
                 #x= rd.randint(1,3)
                 #y= rd.randint(1,3)
-                (a,b)=coordonnees_loi_normale(mu,ecart_type)
+                (a,b)=coordonnees_loi_normale(mu,ecart_type,borne)
                 
                 data['features'][i]['geometry']['rings'][j][k][0]+=a
                 data['features'][i]['geometry']['rings'][j][k][1]+=b
+                
+                
                 
             #Mise à jour du périmètre et de l'aire
             polygon=Polygon(data['features'][i]['geometry']['rings'][j])
