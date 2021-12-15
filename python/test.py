@@ -35,22 +35,32 @@ if __name__ == '__main__':
     data2=tt.ouvre_json(fichier2)
     data3=tt.ouvre_json(fichier3)
     
-    T=[i/100 for i in range(40)]
+    T=[i/400 for i in range(140)]
     MU1=[i/100 for i in range(20)]
     MU2=[i for i in range(10)]
+    
+    MU=[i/20 for i in range(100)]
     
     Volume_INITIAL=V.volume_total(data1)
     
     
     List_ERREUR=[]
     
-    for m2 in MU2:
+    v=len(T)*len(MU)
+    w=0
+    
+    for m in MU:
         print('-- --')
         l=[]
         for t in T:
-            print("____")
-            data1=tt.ouvre_json(fichier1)
-            Volume_NV=rc.calcul_volume_nv(data1,t,m2,0.15,m2,0.15)
+            w+=1
+            print("{} %".format(round((w/v)*100,3)))
+            Volume_NV=0
+            for _ in range(10):
+                data1=tt.ouvre_json(fichier1)
+                incre=rc.calcul_volume_nv(data1,t,m,0.15,m,0.15)
+                Volume_NV+=incre
+            Volume_NV/=10
             TAUX_ERREUR=rc.taux_erreur(Volume_INITIAL,Volume_NV)
             l.append(TAUX_ERREUR)
         List_ERREUR.append(l)    
@@ -58,15 +68,18 @@ if __name__ == '__main__':
     
     
     layout = Layout(
-    title='La nappe', autosize=False,
+    title="Zone Mixte",
+    legend_title="Zone Mixte",autosize=False,
     width=600, height=600,
     margin=dict(l=65, r=50, b=65, t=90)
     )
     
+
+
     
     
 
-    tr1=go.Surface(x=T, y=MU2, z=List_ERREUR, colorscale='Viridis', showscale=False)
+    tr1=go.Surface(x=T, y=MU, z=List_ERREUR, colorscale='Viridis', showscale=False)
     
     
     
@@ -76,7 +89,7 @@ if __name__ == '__main__':
            [{'type': 'surface'}, {'type': 'surface'}]])
     
     # Taux d'erreur à 10%
-    z = np.ones(np.shape(List_ERREUR))*0.1
+    z = np.ones(np.shape(List_ERREUR))*0.05
     
     
     tr2=go.Surface(x=T, y=MU2, z=z, colorscale='Viridis', showscale=False)
@@ -113,16 +126,14 @@ if __name__ == '__main__':
                                   highlightcolor="limegreen", project_z=True))
     """
     fig.add_trace(
-        go.Surface(x=T, y=MU2, z=List_ERREUR, colorscale='YlGnBu', showscale=False),
-        row=1, col=1)
+        go.Surface(x=T, y=MU, z=List_ERREUR, colorscale='YlGnBu', showscale=False),
+        row=2, col=2)
     """
+
     
-    fig.update_xaxes(title_text='Taux de suppression des bâtiments')
-    fig.update_yaxes(title_text='Variation du mu lors de la modification des bâtiments')
     plot(fig)
     
 
-    #plot(fig) 
 
     
     
