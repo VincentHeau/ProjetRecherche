@@ -37,7 +37,7 @@ if __name__ == '__main__':
     
     T=[i/400 for i in range(140)]
     MU1=[i/100 for i in range(20)]
-    MU2=[i for i in range(10)]
+    MU2=[i/10 for i in range(100)]
     
     MU=[i/20 for i in range(100)]
     
