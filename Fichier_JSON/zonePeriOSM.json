@@ -10,8 +10,8 @@
   },
   "geometryType" : "esriGeometryPolygon",
   "spatialReference" : {
-    "wkid" : 4326,
-    "latestWkid" : 4326
+    "wkid" : 102110,
+    "latestWkid" : 2154
   },
   "fields" : [
     {
