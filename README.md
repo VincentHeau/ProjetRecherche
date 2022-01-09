@@ -6,7 +6,12 @@
 2. [Partie 2](#)
 3. [Partie 3](#)
 
-
+|   Tableau des couples  Indicateur - Perturbation  |                          | Facteur de Forme |     Aire      | Volume  | Distance  Bati-Bati | Distance  Bati-Route |
+|:-------------------------------------------------:|--------------------------|------------------|:-------------:|---------|:-------------------:|----------------------|
+|              Suppression  de bâtiments            |                          |                  | OSM & BD TOPO | BD TOPO |                     |                      |
+|               Modification de géométrie           |  Sommets  des  polygones |   OSM & BD TOPO  |               | BD TOPO |                     |                      |
+|                                                   | Hauteurs  des  bâtiments |                  |               | BD TOPO |                     |                      |
+|              Translation de bâtiments             |                          |                  |               |         |                     |                      |
 
 ## 2. Librairies et outils utilisés pour le développement
 
