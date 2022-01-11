@@ -2,9 +2,9 @@
 
 
 ## Table des matières
-1. [Partie 1](#)
-2. [Partie 2](#)
-3. [Partie 3](#)
+1. [Architecture du projet Git](##1)
+2. [Indicateurs sélectionnés et perturbations](##2)
+3. [Résultats](##3)
 
 ## 1. Architecture du projet Git
 ### 1. Données d'entrée
@@ -46,7 +46,7 @@ Pour chaque indicateur, on peut trouver des perturbations intéressantes à appl
 |              Dichotomie de bâtiments              |                          |                  |               |         |                     |                      |
 |              Fusion de bâtiments                  |                          |                  |               |         |                     |                      |
 
-## 3. Résulats
+## 3. Résultats
 ### 3.1 Facteur de forme et modification de géométrie
 ![Résultats pour la BDTOPO](/Annexes/Autres/Formfactor_BDTOPO.png "Résultats sur le facteur de forme pour la BD TOPO")
 ![Résultats pour OSM](/Annexes/Autres/Formfactor_OSM.png "Résulats sur le facteur de forme pour OSM")
