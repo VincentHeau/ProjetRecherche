@@ -48,7 +48,9 @@ Pour chaque indicateur, on peut trouver des perturbations intéressantes à appl
 
 ## 3. Résultats
 ### 3.1 Facteur de forme et modification de géométrie
+** Pour les données de la BD TOPO **
 ![Résultats pour la BDTOPO](/Annexes/Autres/Formfactor_BDTOPO.png "Résultats sur le facteur de forme pour la BD TOPO")
+** Pour les données OSM **
 ![Résultats pour OSM](/Annexes/Autres/Formfactor_OSM.png "Résulats sur le facteur de forme pour OSM")
 Tout d'abord, les courbes sont décroissantes : plus l'erreur de positionnement est importante, plus le facteur de forme sera petit. Cela s'expliquer par le fait que les géométries obtenues sont de plus en plus tordues, et les angles deviennent très aigus ou obtus. Les bâtiments deviennent alors moins compactes, et leur facteur de forme diminue. Le facteur de forme est plus grand pour la zone périphérique car les bâtiments originellement plus carrés que ceux du centre ville. Ensuite, si l'on normalise les trois courbes, on se rend compte que celle de la zone périphérique décroît plus vite que les autres.
 
