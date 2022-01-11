@@ -66,7 +66,7 @@ A chaque taux de suppression, on effectue 20 tirages aléatoires de bâtiments �
 On fait ensuite la moyenne de ces 20 tirages pour obtenir la nouvelle aire moyenne. La dernière opération consiste à faire le rapport entre cette nouvelle aire moyenne et l'aire totale de la couche initiale. 
 
 On observe clairement sur ce graphique que les réactions aux suppressions sont différentes, et cela s'explique par la façon dont sont acquises et fabriquées les données de la BD TOPO et celles d'OSM
-![Couche OSM vs BD TOPO](/Annexes/Autres/aire_suppression.png "Comparaison de couches OSM-BDTOPO pour la suppression de bâtiments")
+![Couche OSM vs BD TOPO](/Annexes/Autres/comparaison_airesup.png "Comparaison de couches OSM-BDTOPO pour la suppression de bâtiments")
 
 ### 3.3 Aire et modification de géométrie
 ![Aire/Modifgeom](Annexes/Aire/aire_modification_ZoneMixte_taux0.0.html "Etude de l'indicateur Aire en fonction de la suppression de bâtiments")
