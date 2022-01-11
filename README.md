@@ -2,9 +2,9 @@
 
 
 ## Table des matières
-1. [Partie 1](#)
-2. [Partie 2](#)
-3. [Partie 3](#)
+1. [Architecture du projet Git](##1)
+2. [Indicateurs sélectionnés et perturbations](##2)
+3. [Résultats](##3)
 
 ## 1. Architecture du projet Git
 ### 1. Données d'entrée
@@ -46,16 +46,30 @@ Pour chaque indicateur, on peut trouver des perturbations intéressantes à appl
 |              Dichotomie de bâtiments              |                          |                  |               |         |                     |                      |
 |              Fusion de bâtiments                  |                          |                  |               |         |                     |                      |
 
-## 3. Résulats
+## 3. Résultats
 ### 3.1 Facteur de forme et modification de géométrie
-      ![Résultats pour la BDTOPO](/Annexes/Autres/Formfactor_BDTOPO.png "Résulats sur le facteur de forme pour la BD TOPO")
-      
-      ![Résultats pour OSM](/Annexes/Autres/Formfactor_OSM.png "Résulats sur le facteur de forme pour OSM")
-      
-       Aucune différence apparente entre les deux sources de données
+** Pour les données de la BD TOPO **
+![Résultats pour la BDTOPO](/Annexes/Autres/Formfactor_BDTOPO.png "Résultats sur le facteur de forme pour la BD TOPO")
+** Pour les données OSM **
+![Résultats pour OSM](/Annexes/Autres/Formfactor_OSM.png "Résulats sur le facteur de forme pour OSM")
+Tout d'abord, les courbes sont décroissantes : plus l'erreur de positionnement est importante, plus le facteur de forme sera petit. Cela s'expliquer par le fait que les géométries obtenues sont de plus en plus tordues, et les angles deviennent très aigus ou obtus. Les bâtiments deviennent alors moins compactes, et leur facteur de forme diminue. Le facteur de forme est plus grand pour la zone périphérique car les bâtiments originellement plus carrés que ceux du centre ville. Ensuite, si l'on normalise les trois courbes, on se rend compte que celle de la zone périphérique décroît plus vite que les autres.
+
+
+**Aucune différence apparente entre les deux sources de données** 
+La réction des deux sources de données lorsque l'on calcule cet indicateur en modifiant la géométrie est similaire.
       
 ### 3.2 Aire et suppression de bâtiments
+![Aire en fonction de la suppression de bâtiments](/Annexes/Autres/aire_suppression.png "Comparaison OSM-BDTOPO pour la suppression de bâtiments")
+**Réaction intéressante car elle dépend de la source de données** 
+Que ce soit pour OSM comme pour BD TOPO, on calcule l'aire totale des bâtiments de la couche initiale (taux de suppression à 0). Ensuite, on perturbe les données en supprimant un taux de bâtiments. (ce taux est la valeur présente sur l'axe des abscisses). La valeur en abscisse lui correspondant est obtenue par le schéma suivant:
+A chaque taux de suppression, on effectue 20 tirages aléatoires de bâtiments à supprimer dans la couche. Et pour chacun de ces tirages, on calcule la nouvelle aire totale.
+On fait ensuite la moyenne de ces 20 tirages pour obtenir la nouvelle aire moyenne. La dernière opération consiste à faire le rapport entre cette nouvelle aire moyenne et l'aire totale de la couche initiale. 
+
+On observe clairement sur ce graphique que les réactions aux suppressions sont différentes, et cela s'explique par la façon dont sont acquises et fabriquées les données de la BD TOPO et celles d'OSM
+![Couche OSM vs BD TOPO](/Annexes/Autres/comparaison_airesup.png "Comparaison de couches OSM-BDTOPO pour la suppression de bâtiments")
+
 ### 3.3 Aire et modification de géométrie
+![Aire/Modifgeom](Annexes/Aire/aire_modification_ZoneMixte_taux0.0.html "Etude de l'indicateur Aire en fonction de la suppression de bâtiments")
 ### 3.4 Volume et suppression de bâtiments 
 ### 3.5 Volume et modification de géométrie
 ### 3.6 Nappes 3D 
