@@ -25,7 +25,6 @@ def suppression(tauxSuppr,data):
             index = rd.randint(0,nbElementASupr-1)
         listeASuppr.append(index)
     
-    #print(listeASuppr)
     #on supprime les bâtiments correspondants aux indices de la liste listeASuppr
     for index in listeASuppr:
         del data['features'][index]
