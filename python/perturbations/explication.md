@@ -5,5 +5,5 @@ Le form factor, ou facteur de forme en français est un indicateur qui caractér
 C'est le ratio entre la surface au sol d'un bâtiment et le carré du périmètre de ce bâtiment.
 FACTEUR DE FORME = AIRE/(PERIMETRE)²
 ### Exemples de facteurs de formes
-** Pour les données de la BD TOPO **
+** 0.018 **
 ![Résultats pour la BDTOPO](/Annexes/FormFactor/0,018.png "Résultats sur le facteur de forme pour la BD TOPO")
