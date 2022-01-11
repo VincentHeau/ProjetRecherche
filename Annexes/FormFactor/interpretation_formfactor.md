@@ -10,6 +10,8 @@ Le facteur de forme le plus grand est le cercle, avec 0.080. Ainsi, moins le fac
 ** 0.018 **
 ![0,018](/Annexes/FormFactor/0,018.PNG "0,018")
 
+<img src="/Annexes/FormFactor/0,018.PNG" alt="drawing" width="200"/>
+
 ** 0.025 **
 ![0,025](/Annexes/FormFactor/0,025.PNG "0,025")
 
