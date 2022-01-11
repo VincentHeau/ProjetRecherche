@@ -24,12 +24,14 @@ A l'ouverture du dossier *python*, on trouve un code par indicateur ainsi que de
 
 ## 2. Indicateurs sélectionnés et perturbations
 
-Les indicateurs ont été choisis avec en explorant les indicateurs du projet[OrbisGeoclimate](https://github.com/orbisgis/geoclimate/wiki/Output-data). 
+Les indicateurs ont été choisis avec en explorant les indicateurs du projet [OrbisGeoclimate](https://github.com/orbisgis/geoclimate/wiki/Output-data). 
 Parmis ceux que nous avons implémentés, on trouve les indicateurs suivants:
 
-**FormFactor** (aire d'un bâtiment divisée par son périmètre au carré, pour plus de renseignements sur cet indicateur voir [interpretation_formfactor.md](/Annexes/FormFactor/interpretation_formfactor.md) )
-**Aire** (Aire des bâtiments de la couche -- somme des aires des bâtiments de la couche)
-**Volume** ( Volume des bâtiments de la couche -- somme des volumes des bâtiments de la couche )
+* **FormFactor** (aire d'un bâtiment divisée par son périmètre au carré, pour plus de renseignements sur cet indicateur voir [interpretation_formfactor.md](/Annexes/FormFactor/interpretation_formfactor.md) )
+* 
+* **Aire** (Aire des bâtiments de la couche -- somme des aires des bâtiments de la couche)
+* 
+* **Volume** ( Volume des bâtiments de la couche -- somme des volumes des bâtiments de la couche )
 
 Pour chaque indicateur, on peut trouver des perturbations intéressantes à appliquer pour effectuer ensuite une analyse de sensibilité. Le tableau ci-dessous récapitule les choix que nous avons effectués.
 
@@ -46,6 +48,12 @@ Pour chaque indicateur, on peut trouver des perturbations intéressantes à appl
 
 ## 3. Résulats
 ### 3.1 Facteur de forme et modification de géométrie
+      ![Résultats pour la BDTOPO](/Annexes/Autres/Formfactor_BDTOPO.png "Résulats sur le facteur de forme pour la BD TOPO")
+      
+      ![Résultats pour OSM](/Annexes/Autres/Formfactor_OSM.png "Résulats sur le facteur de forme pour OSM")
+      
+       Aucune différence apparente entre les deux sources de données
+      
 ### 3.2 Aire et suppression de bâtiments
 ### 3.3 Aire et modification de géométrie
 ### 3.4 Volume et suppression de bâtiments 
