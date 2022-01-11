@@ -28,10 +28,5 @@ def suppression(tauxSuppr,data):
     #on supprime les bâtiments correspondants aux indices de la liste listeASuppr
     for index in listeASuppr:
         del data['features'][index]
-        
-
-    
-    #on remplace notre fichier de départ par notre fichier modifié
-    #ecrit_json(data,fichier)
-      
+       
     return data
