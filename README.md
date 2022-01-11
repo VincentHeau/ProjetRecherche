@@ -21,9 +21,9 @@ Les logiciels et ressource suivantes ont été utilisés pour le développement 
 
 *nom-d'environnement*
 ## 3. Versions
-0.0
+0.5
 ## 4. Auteurs
 
 * **Vincent Heau** [VincentHeau](https://github.com/VincentHeau)
-* **Tristan Fillon**
+* **Tristan Fillon**[TFillon](https://github.com/TFillon)
 * **Félix Bal** [fe73](https://github.com/fe73)
