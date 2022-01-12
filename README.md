@@ -2,17 +2,25 @@
 
 ## Table des matières
 1. [Architecture du projet Git](##1)
+
       1.1 [Données d'entrée](###1.1)
 
 2. [Indicateurs sélectionnés et perturbations](##2)
 
 3. [Résultats](##3)
+
       3.1 [Facteur de forme et modification de géométrie](###3.1)
+
       3.2 [Aire et suppression de bâtiments](###3.2)
+
       3.3 [Aire et modification de géométrie](###3.3)
+
       3.4 [Volume et suppression de bâtiments](###3.4)
+
       3.5 [Volume et modification de géométrie](###3.5)
+
       3.6 [Volume avec modification de géométrie et suppression de bâtiments](###3.6)
+
       3.7 [Commentaires sur les autres indicateurs et perturbations](###3.7)
 
 4. [Librairies et outils utilisés pour le développement](##4)
