@@ -2,8 +2,19 @@
 
 ## Table des matières
 1. [Architecture du projet Git](##1)
+      1.1 [Données d'entrée](###1.1)
 2. [Indicateurs sélectionnés et perturbations](##2)
 3. [Résultats](##3)
+      3.1 [Facteur de forme et modification de géométrie](###3.1)
+      3.2 [Aire et suppression de bâtiments](###3.2)
+      3.3 [Aire et modification de géométrie](###3.3)
+      3.4 [Volume et suppression de bâtiments](###3.4)
+      3.5 [Volume et modification de géométrie](###3.5)
+      3.6 [Volume avec modification de géométrie et suppression de bâtiments](###3.6)
+      3.7 [Commentaires sur les autres indicateurs et perturbations](###3.7)
+4. [Librairies et outils utilisés pour le développement](##4)
+5. [Versions](##5)
+6. [Auteurs](##6)
 
 
 ## 1. Architecture du projet Git
@@ -113,19 +124,19 @@ Sur ce graphe, on observe que l'influence du taux de suppression sur le volume t
 
 Les logiciels et ressources suivants ont été utilisés pour le développement du projet:
 
-* [Spyder]() - Editeur de code
-* Shapely - Géométrie des polygones
-* Plotly - Production de graphes
+* [Spyder] (https://www.spyder-ide.org/) - Editeur de code
+* [Shapely] (https://pypi.org/project/Shapely/) - Géométrie des polygones
+* [Plotly] (https://plotly.com/python/) - Production de graphes
 
 Pour les couches de données
-* BD TOPO (www.ign.fr)
-* OSM (openstreetmap)
+* [BD TOPO] (www.ign.fr)
+* [OSM] (https://www.openstreetmap.org)
 
 ## 5. Versions
 0.5
 
 
 ## 6. Auteurs
-* **Vincent HEAU** [VincentHeau](https://github.com/VincentHeau)
-* **Tristan FILLON**[TFillon](https://github.com/TFillon)
-* **Félix BAL** [fe73](https://github.com/fe73)
+* **Vincent HEAU** [VincentHeau] (https://github.com/VincentHeau)
+* **Tristan FILLON** [TFillon] (https://github.com/TFillon)
+* **Félix BAL** [fe73] (https://github.com/fe73)
