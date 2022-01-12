@@ -129,9 +129,11 @@ Malheureusement, on n'observe aucune différence majeure entre les nappes de cha
 
 En conclusion ces résultats ne sont pas forcément concluant pour comparer la qualité des données OSM et BD TOPO.
 
-### 3.4 avec modification de géométrie et suppression de bâtiments
+### 3.4 Aire avec modification de géométrie et suppression de bâtiments
 ![Légende](Annexes/Autres/legende.png "legende")
-![Aire/Modifgeom](Annexes/Autres/aire_modification&suppression.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
+![Aire/Modifgeom](Annexes/Autres/nappe_aire_OSM_BDTOPO.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
+
+Pour ce qui est de l'interprétation, cette nappe en 3D réalisée pour la zone Mixte n'apporte pas beaucoup d'informations supplémentaires par rapport à la partie 3.2. 
 
 ### 3.5 Volume et suppression de bâtiments 
 ![VolumeSuppression](/Annexes/Autres/volume_suppression.png "Volume et suppression de bâtiments")
