@@ -134,6 +134,16 @@ En conclusion ces résultats ne sont pas forcément concluant pour comparer la q
 
 ### 3.5 Volume et suppression de bâtiments 
 ![VolumeSuppression](/Annexes/Autres/volume_suppression.png "Volume et suppression de bâtiments")
+Observations similaires à celle de l'aire. Les conclusions sur les palliers sont les m^me que pour l'aire.
+
+En comparant les différentes zones, on a néanmoins le résultat suivant
+|                                | Périphérique | Centre | Mixte |
+|--------------------------------|--------------|--------|-------|
+|           Ecart-type           | 0.8          | 0.8    | 0.8   |
+|    Modification de géométrie   | 1.5          | 1.5    | 1.5   |
+| Rapport d'erreur sur le volume | 0.01         | 0.003  | 0.003 |
+
+On observe que l'erreur à écart-type et moyenne similaire est plus élevé pour la zone Périphérique. Cela s'explique par le fait que les maisons en zone Périphérique ont une hauteur moindre et que la modification de cet hauteur entraîne une grosse perturbation du volume, or cela n'est pas le cas pour les grands immeubles des zones Mixtes et Périphériques.
 
 ### 3.6 Volume et modification de géométrie
 ![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
