@@ -81,19 +81,19 @@ Date des données utilisées :  * BD TOPO Haute Garonne (31) ( Mars 2021 )
 
 
 ![Source OSM](/Annexes/Autres/source_osm.png "Source OSM")
-![Source BD_TOPO](/Annexes/Autres/source_bdtopo.png "Source BD_TOPO")
-C'est dans la manière dont sont produites les données que l'on peut observer comprendre les différences qui existe entre les données OpenStreetMap et celles de l'IGN.
+![Source BD_TOPO](/Annexes/Autres/sources_bdtopo.png "Source BD_TOPO")
+C'est dans la manière dont sont produites les données que l'on peut observer comprendre les différences qui existent entre les données OpenStreetMap et celles de l'IGN.
 Comme on le voit sur les images précédentes, les données OSM ne sont pas mises à jour depuis 2009 en ce qui concerne les bâtiments de cet îlot. De plus elles ne sont pas contrôlées contrairement aux données de l'IGN.
 
 
 **Qu'en conclure sur la qualité des données ?**
 Si l'on a besoin de calculer l'indicateur AIRE TOTAL pour une couche de bâtiments, alors on a intérêt à prendre les données de la BD TOPO plutôt que les données OSM. Avec la BD TOPO, si des erreurs d'insertion sont présentes, l'AIRE TOTALE a de forte chance d'être proche de l'AIRE TOTALE VRAIE, c'est à dire celle d'une couche de données parafaitement juste. Ce n'est pas le cas avec OSM. De plus, cela est d'autant plus vrai en centre-ville où 
 ### 3.3 Aire et modification de géométrie
-![Aire/Modifgeom](Annexes/Aire/aire_modification_ZoneMixte_taux0.0.html "Etude de l'indicateur Aire en fonction de la suppression de bâtiments")
+![Aire/Modifgeom](Annexes/Autres/aire_modification.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
 ### 3.4 Volume et suppression de bâtiments 
 ![Logo](/Annexes/Autres/volume_suppression.png "logo")
 ### 3.5 Volume et modification de géométrie
-
+![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
 ### 3.6 Volume avec modification de géométrie et suppression de bâtiments
 ![Aire/Modifgeom](Annexes/Autres/Volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
 
