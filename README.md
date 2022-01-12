@@ -138,7 +138,7 @@ Pour ce qui est de l'interprétation, cette nappe en 3D réalisée pour la zone 
 ### 3.5 Volume et suppression de bâtiments 
 ![VolumeSuppression](/Annexes/Autres/volume_suppression.png "Volume et suppression de bâtiments")
 Observations similaires à celle de l'aire. Les conclusions sur les palliers sont les mêmes que pour l'aire.
-L'ajout de la hauteur comme objet supplémentaire dans 
+L'ajout de la hauteur comme objet supplémentaire dont on modifie la géométrie ne semble pas changer les conclusions que nous pouvions déjà tirer sur l'aire. 
 
 ### 3.6 Volume et modification de géométrie
 ![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
