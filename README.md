@@ -15,13 +15,15 @@
 
       3.3 [Aire et modification de géométrie](###3.3)
 
-      3.4 [Volume et suppression de bâtiments](###3.4)
+      3.4 [Aire avec modification de géométrie et suppression de bâtiments](###3.4)
 
-      3.5 [Volume et modification de géométrie](###3.5)
+      3.5 [Volume et suppression de bâtiments](###3.5)
 
-      3.6 [Volume avec modification de géométrie et suppression de bâtiments](###3.6)
+      3.6 [Volume et modification de géométrie](###3.6)
 
-      3.7 [Commentaires sur les autres indicateurs et perturbations](###3.7)
+      3.7 [Volume avec modification de géométrie et suppression de bâtiments](###3.7)
+
+      3.8 [Commentaires sur les autres indicateurs et perturbations](###3.8)
 
 4. [Librairies et outils utilisés pour le développement](##4)
 
