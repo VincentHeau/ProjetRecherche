@@ -89,7 +89,7 @@ Comme on le voit sur les images précédentes, les données OSM ne sont pas mise
 **Qu'en conclure sur la qualité des données ?**
 Si l'on a besoin de calculer l'indicateur AIRE TOTAL pour une couche de bâtiments, alors on a intérêt à prendre les données de la BD TOPO plutôt que les données OSM. Avec la BD TOPO, si des erreurs d'insertion sont présentes, l'AIRE TOTALE a de forte chance d'être proche de l'AIRE TOTALE VRAIE, c'est à dire celle d'une couche de données parafaitement juste. Ce n'est pas le cas avec OSM. De plus, cela est d'autant plus vrai en centre-ville où 
 ### 3.3 Aire et modification de géométrie
-![Aire/Modifgeom](Annexes/Aire/aire_modification_ZoneMixte_taux0.0.html "Etude de l'indicateur Aire en fonction de la suppression de bâtiments")
+![Aire/Modifgeom](Annexes/Aire/aire_modification.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
 ### 3.4 Volume et suppression de bâtiments 
 ![Logo](/Annexes/Autres/volume_suppression.png "logo")
 ### 3.5 Volume et modification de géométrie
