@@ -143,12 +143,17 @@ L'ajout de la hauteur comme objet supplémentaire dont on modifie la géométrie
 ### 3.6 Volume et modification de géométrie
 ![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
 
-Pour le volume, les données OSM ne possédant pas l'attribut hauteur des bâtiments, nous ne pouvons pas comparer
+Pour le volume, les données OSM ne possédant pas l'attribut hauteur des bâtiments, nous ne pouvons pas comparer ces sources de données entre elles.
+En revanche, il est intéressant de voir les différences entre les nappes de chaleur pour les trois zones. L'échantillon présent dans le tableau ci-dessous est représentatif de l'ensemble des trois nappes.
 |                                | Périphérique | Centre | Mixte |
 |--------------------------------|--------------|--------|-------|
 |           Ecart-type           | 0.8          | 0.8    | 0.8   |
 |    Modification de géométrie   | 1.5          | 1.5    | 1.5   |
 | Rapport d'erreur sur le volume | 0.01         | 0.003  | 0.003 |
+
+On observe que si l'erreur sur le volume est sensiblement la même à paramètres égaux pour les zones Centre et Mixte, il existe une différence notable en ce qui concerne la zone Périphérique où l'on peut observer un rapport d'erreur sur le volume bien plus important. 
+Cela est lié au fait que le volume prend en compte la hauteur des bâtiments. Or la moyenne pour la modification de géométrie s'applique de la même manière sur les sommets des bâtiments que sur leur hauteur. Comme les bâtiments de la zone Périphérique sont généralement des maisons pavillonaires, alors la perturbation appliquée sur la hauteur entraîne une plus forte erreur que sur les grands immeubles des zones Centre et Mixte. 
+
 ### 3.7 Volume avec modification de géométrie et suppression de bâtiments
 ![Aire/Modifgeom](Annexes/Autres/Volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
 
