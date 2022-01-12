@@ -11,7 +11,7 @@ def Calcul_dist_bat_rue():
     arcpy.env.overwriteOutput = False
 
     zone = "donneesZonesBDTOPO\zoneCentre.shp" #Mettre la zone que l'on souhaite
-    Routes_Toulouse_OSM = "donneesRouteOSM\Routes_Toulouse_OSM.shp" #zone et Routes_Toulouse_OSM ont été trouvées dans le workspace défini ligne 23.
+    Routes_Toulouse_OSM = "donneesRouteOSM\Routes_Toulouse_OSM.shp" #zone et Routes_Toulouse_OSM ont été trouvées dans le workspace défini ligne 28.
 
     #Calculer la distance bat-rue 
     arcpy.analysis.Near(zone, Routes_Toulouse_OSM, "100 Meters") #Renvoie pour chaque bâtiment, dans la colonne NEAR_DIST (il la crée si elle n'existe pas), la distance à la route la plus proche, (entre les points de chacune des entités permettant la distance la plus courte, et non les barycentres).
@@ -26,4 +26,5 @@ def Calcul_dist_bat_rue():
 
 if __name__ == '__main__':
     with arcpy.EnvManager(scratchWorkspace="", workspace=""): #Ajouter dans scratchWorkspace et workspace l'emplacement des données source une fois ce fichier téléchargé.
+        #Il sera nécessaire de créer un fichier Arcgis, et d'insérer dans sa geodatabase (gdb) la couche que l'on souhaite traiter. Ces scratchWorkspace et workspace correspondront à l'emplacement de cette gdb.
         Calcul_dist_bat_rue()
