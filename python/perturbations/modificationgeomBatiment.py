@@ -72,8 +72,6 @@ def changement_sommet(data,mu,ecart_type,borne):
             
             for k in range(len(data['features'][i]['geometry']['rings'][j])):
                 
-                #x= rd.randint(1,3)
-                #y= rd.randint(1,3)
                 (a,b)=coordonnees_loi_normale(mu,ecart_type,borne)
                 
                 data['features'][i]['geometry']['rings'][j][k][0]+=a
