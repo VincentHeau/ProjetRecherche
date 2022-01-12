@@ -123,7 +123,12 @@ Si l'on a besoin de calculer l'indicateur AIRE TOTALE pour une couche de bâtime
 ### 3.3 Aire et modification de géométrie
 ![Aire/Modifgeom](Annexes/Autres/aire_modification.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
 
-L'intéret principal d'effectuer cette modification de géométrie est de pouvoir détecter des différences dans les géométries que l'on ne perçoit pas forcément lors d'une visualisation sous un SIG.
+L'intéret principal d'effectuer cette modification de géométrie est de pouvoir détecter des différences dans les géométries que l'on ne perçoit pas forcément lors d'une visualisation sous un SIG. En effet, on peut facilement imaginer que pour une façade droite (segment entre deux sommets du polygone), une source de données ne représente qu'un segment entre deux points, tandis qu'une autre représente une ligne brisée avec des angles proches de 180°(donc proche d'une droite).
+**La modification de géométrie peut faire ressortir ces sommets "invisibles"**
+
+Malheureusement, on n'observe aucune différence majeure entre les nappes de chaleur OSM et BD TOPO. On le voit sur la troisième nappe de chaleur (nappe des différences). On peut simplement observer que l'erreur sur l'aire est croissante plus la modification de géométrie augmente. Avec un écart-type sigma plus grande que 1, on peut obtenir des erreurs plus importantes tout en gardant une moyenne Mu plus faible.
+
+En conclusion ces résultats ne sont pas forcément concluant pour comparer la qualité des données OSM et BD TOPO.
 
 ### 3.4 avec modification de géométrie et suppression de bâtiments
 ![Légende](Annexes/Autres/legende.png "legende")
