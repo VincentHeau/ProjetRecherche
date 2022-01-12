@@ -109,7 +109,10 @@ Date des données utilisées :  * BD TOPO Haute Garonne (31) ( Mars 2021 )
 
 
 ![Source OSM](/Annexes/Autres/source_osm.png "Source OSM")
+
 ![Source BD_TOPO](/Annexes/Autres/sources_bdtopo.png "Source BD_TOPO")
+** Les sources pour l'obtention des données de la BD TOPO **
+
 C'est dans la manière dont sont produites les données que l'on peut comprendre les différences qui existent entre les données d'OpenStreetMap et celles de l'IGN.
 Comme on le voit sur les images précédentes, les données OSM ne sont pas mises à jour depuis 2009 en ce qui concerne les bâtiments de cet îlot. De plus elles ne sont pas contrôlées contrairement aux données de l'IGN.
 
