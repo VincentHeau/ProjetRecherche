@@ -59,12 +59,15 @@ La réction des deux sources de données lorsque l'on calcule cet indicateur en 
       
 ### 3.2 Aire et suppression de bâtiments
 ![Aire en fonction de la suppression de bâtiments](/Annexes/Autres/aire_suppression.png "Comparaison OSM-BDTOPO pour la suppression de bâtiments")
+
 **Réaction intéressante car elle dépend de la source de données** 
 Que ce soit pour OSM comme pour BD TOPO, on calcule l'aire totale des bâtiments de la couche initiale (taux de suppression à 0). Ensuite, on perturbe les données en supprimant un taux de bâtiments. (ce taux est la valeur présente sur l'axe des abscisses). La valeur en abscisse lui correspondant est obtenue par le schéma suivant:
 A chaque taux de suppression, on effectue 20 tirages aléatoires de bâtiments à supprimer dans la couche. Et pour chacun de ces tirages, on calcule la nouvelle aire totale.
 On fait ensuite la moyenne de ces 20 tirages pour obtenir la nouvelle aire moyenne. La dernière opération consiste à faire le rapport entre cette nouvelle aire moyenne et l'aire totale de la couche initiale. 
 
-On observe clairement sur ce graphique que les réactions aux suppressions sont différentes, et cela s'explique par la façon dont sont acquises et fabriquées les données de la BD TOPO et celles d'OSM
+On observe clairement sur ce graphique que les réactions aux suppressions sont différentes, et cela s'explique par la façon dont sont acquises et fabriquées les données de la BD TOPO et celles d'OSM. Pour l'expliquer, concentrons-nous sur la zone centre (*représentée en bleu sur les graphes*). 
+
+Sur ces zones, on observe pour la BD TOPO, un pallier proche de 1 pour des taux de suppression faibles. Ainsi, lorsque l'on tire au hasard un faible nombre de bâtiments à supprimer, et que l'on calcule l'aire après suppression, cette dernière est proche de l'aire initiale. Pour mieux le comprendre, il faut visualiser une représentation cartographique de la zone Centre. Pour la BD TOPO, on y observe **460 bâtiments**. Parmi ces bâtiments, on en compte quelques uns assez imposants et beaucoup de petits qui sont côte à côte et qui forment des îlots urbains. La forme de cette courbe indique que tant que l'on ne supprime pas plus de 5% des bâtiments de la zone Centre, on a une aire proche de l'aire initiale. Comme les bâtiments à supprimer sont tirés au hasard, on a beaucoup de chance de n'en supprimer que des petits qui n'influence pas beaucoup l'aire totale. 
 ![Couche OSM vs BD TOPO](/Annexes/Autres/comparaison_airesup.png "Comparaison de couches OSM-BDTOPO pour la suppression de bâtiments")
 
 ### 3.3 Aire et modification de géométrie
