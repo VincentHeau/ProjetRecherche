@@ -1,5 +1,4 @@
 # Analyse de Sensibilité, Projet Recherche
-![Logo](/Annexes/Autres/logo4.png "logo")
 
 ## Table des matières
 1. [Architecture du projet Git](##1)
@@ -71,10 +70,15 @@ On observe clairement sur ce graphique que les réactions aux suppressions sont 
 ### 3.3 Aire et modification de géométrie
 ![Aire/Modifgeom](Annexes/Aire/aire_modification_ZoneMixte_taux0.0.html "Etude de l'indicateur Aire en fonction de la suppression de bâtiments")
 ### 3.4 Volume et suppression de bâtiments 
-![Logo](/Annexes/Autres/logo.png "logo")
+![Logo](/Annexes/Autres/volume_suppression.png "logo")
 ### 3.5 Volume et modification de géométrie
+
 ### 3.6 Volume avec modification de géométrie et suppression de bâtiments
-![Aire/Modifgeom](Annexes/Autre/Volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
+![Aire/Modifgeom](Annexes/Autres/Volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
+
+Comme on l'observe ci-dessus, nous avons fait le choix d'afficher ici le résultat sur la zone Centre de Toulouse. Pour les autres zones, le comportement est le même.
+Sur ce graphe, on observe que l'influence du taux de suppression sur le volume total de la couche de bâtiments est bien plus prépondérante que celle de la modification de géométrie. Si l'on s'intéresse à **l'intersection** entre le plan qui correspond à 5% d'erreur et la nappe obtenue, on a une légère courbure. Cependant malgré cela, on constate tout de même la forte influence du taux de suppression. *Il est prépondérant*. En comparant les nappes pour les 3 zones, on aurait du mal à en tirer des conclusions différentes de celles de la partie 3.5.
+
 ### 3.7 Commentaires sur les autres indicateurs et perturbations
 ## 4. Librairies et outils utilisés pour le développement
 
