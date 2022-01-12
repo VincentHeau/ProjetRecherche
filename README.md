@@ -109,6 +109,7 @@ Date des données utilisées :  * BD TOPO Haute Garonne (31) ( Mars 2021 )
 ![Source OSM](/Annexes/Autres/source_osm.png "Source OSM")
 
 ![Source BD_TOPO](/Annexes/Autres/sources_bdtopo.png "Source BD_TOPO")
+
 ** Les sources pour l'obtention des données de la BD TOPO **
 
 C'est dans la manière dont sont produites les données que l'on peut comprendre les différences qui existent entre les données d'OpenStreetMap et celles de l'IGN.
@@ -134,19 +135,12 @@ En conclusion ces résultats ne sont pas forcément concluant pour comparer la q
 
 ### 3.5 Volume et suppression de bâtiments 
 ![VolumeSuppression](/Annexes/Autres/volume_suppression.png "Volume et suppression de bâtiments")
-Observations similaires à celle de l'aire. Les conclusions sur les palliers sont les m^me que pour l'aire.
-
-En comparant les différentes zones, on a néanmoins le résultat suivant
-|                                | Périphérique | Centre | Mixte |
-|--------------------------------|--------------|--------|-------|
-|           Ecart-type           | 0.8          | 0.8    | 0.8   |
-|    Modification de géométrie   | 1.5          | 1.5    | 1.5   |
-| Rapport d'erreur sur le volume | 0.01         | 0.003  | 0.003 |
-
-On observe que l'erreur à écart-type et moyenne similaire est plus élevé pour la zone Périphérique. Cela s'explique par le fait que les maisons en zone Périphérique ont une hauteur moindre et que la modification de cet hauteur entraîne une grosse perturbation du volume, or cela n'est pas le cas pour les grands immeubles des zones Mixtes et Périphériques.
+Observations similaires à celle de l'aire. Les conclusions sur les palliers sont les mêmes que pour l'aire.
+L'ajout de la hauteur comme objet supplémentaire dans 
 
 ### 3.6 Volume et modification de géométrie
 ![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
+
 
 ### 3.7 Volume avec modification de géométrie et suppression de bâtiments
 ![Aire/Modifgeom](Annexes/Autres/Volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
