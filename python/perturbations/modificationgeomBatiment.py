@@ -10,7 +10,7 @@ import numpy as np
 import random
 
 
-def coordonnees_loi_normale(mu, ecart_type,borne): 
+def coordonnees_loi_normale(mu, ecart_type, borne): 
     normale = np.random.normal(mu,ecart_type,1)[0] 
     if normale<0: 
         normale = 0 
@@ -33,10 +33,12 @@ def hauteur_loi_normale(mu, ecart_type):
     return h
 
 
-def coordonnees_loi_normale_v2(mu, ecart_type): 
+def coordonnees_loi_normale_v2(mu, ecart_type, borne): 
     normale = abs(np.random.normal(mu,ecart_type,1)[0]) 
-    y = np.random.normal(mu,ecart_type,1)[0]
-    
+    if normale<0: 
+        normale = 0 
+    if normale>borne:
+        normale=borne
     teta = np.random.uniform(-np.pi,np.pi) 
     x = normale * np.sin(teta) 
     y = normale * np.cos(teta) 
