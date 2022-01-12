@@ -1,5 +1,11 @@
 """
-
+Auteurs : Tristan FILLON, Vincent HEAU, Félix BAL
+Pour chaque bâtiment de la couche Arcgis stockée dans zone (ligne 23), remplit l'attribut NEAR_DIST, contenant la distance à la rue la plus proche. Les rues sont stockées dans la variable Routes_Toulouse_OSM (ligne 24).
+Etaes nécessaires à l'utilisation de ce script :
+    -Ouvrir un fichier Arcgis et y insérer le fichier Routes_Toulouse_OSM.shp (présent sur ce Git dans ProjetRecherche/donneesRouteOSM)
+    -Y insérer également les fichiers .shp contenant les bâtiments des différentes zones traitées (dans ProjetRecherche/donneesZonesOSM et ProjetRecherche/donneesZonesBDTOPO)
+    -Remplir le contenu des variables scratchWorkspace et workspace (ligne 38). Ils correspondent à l'emplacement de la geodatabase (et se terminent donc par .gdb) du fichier Arcgis créé.
+    -Insérer ce script dans Arcgis et le lancer.
 """
 
 import arcpy
@@ -14,8 +20,8 @@ def Calcul_dist_bat_rue():
     #To allow overwriting outputs change overwriteOutput option to True.
     arcpy.env.overwriteOutput = False
 
-    zone = "donneesZonesBDTOPO\zoneCentre.shp" #Mettre la zone que l'on souhaite
-    Routes_Toulouse_OSM = "donneesRouteOSM\Routes_Toulouse_OSM.shp" #zone et Routes_Toulouse_OSM ont été trouvées dans le workspace défini ligne 28.
+    zone = "zoneCentre" #Mettre la zone que l'on souhaite
+    Routes_Toulouse_OSM = "Routes_Toulouse_OSM" #zone et Routes_Toulouse_OSM ont été trouvées dans le workspace défini ligne 28.
 
     #Calculer la distance bat-rue 
     arcpy.analysis.Near(zone, Routes_Toulouse_OSM, "100 Meters") #Renvoie pour chaque bâtiment, dans la colonne NEAR_DIST (il la crée si elle n'existe pas), la distance à la route la plus proche, (entre les points de chacune des entités permettant la distance la plus courte, et non les barycentres).
