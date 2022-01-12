@@ -131,24 +131,3 @@ def changement_hauteur(data,mu,ecart_type):
                   
     
     return data
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
