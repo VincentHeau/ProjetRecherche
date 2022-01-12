@@ -120,19 +120,23 @@ Si l'on a besoin de calculer l'indicateur AIRE TOTALE pour une couche de bâtime
 ### 3.3 Aire et modification de géométrie
 ![Aire/Modifgeom](Annexes/Autres/aire_modification.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
 
-### 3.4 Volume et suppression de bâtiments 
-![Logo](/Annexes/Autres/volume_suppression.png "logo")
+### 3.4 avec modification de géométrie et suppression de bâtiments
+![Légende](Annexes/Autres/legende.png "legende")
+![Aire/Modifgeom](Annexes/Autres/aire_modification&suppression.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
 
-### 3.5 Volume et modification de géométrie
+### 3.5 Volume et suppression de bâtiments 
+![VolumeSuppression](/Annexes/Autres/volume_suppression.png "Volume et suppression de bâtiments")
+
+### 3.6 Volume et modification de géométrie
 ![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
 
-### 3.6 Volume avec modification de géométrie et suppression de bâtiments
+### 3.7 Volume avec modification de géométrie et suppression de bâtiments
 ![Aire/Modifgeom](Annexes/Autres/Volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
 
 Comme on l'observe ci-dessus, nous avons fait le choix d'afficher ici le résultat sur la Zone Centre de Toulouse. Pour les autres zones, le comportement est le même.
 Sur ce graphe, on observe que l'influence du taux de suppression sur le volume total de la couche de bâtiments est bien plus prépondérante que celle de la modification de géométrie. Si l'on s'intéresse à **l'intersection** entre le plan qui correspond à 5% d'erreur et la nappe obtenue, on a une légère courbure. Cependant malgré cela, on constate tout de même la forte influence du taux de suppression, *il est prépondérant*. En comparant les nappes pour les trois zones, on aurait du mal à en tirer des conclusions différentes de celles de la partie 3.5.
 
-### 3.7 Commentaires sur les autres indicateurs et perturbations
+### 3.8 Commentaires sur les autres indicateurs et perturbations
 
 
 ## 4. Librairies et outils utilisés pour le développement
