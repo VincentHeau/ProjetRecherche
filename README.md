@@ -143,7 +143,12 @@ L'ajout de la hauteur comme objet supplémentaire dont on modifie la géométrie
 ### 3.6 Volume et modification de géométrie
 ![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
 
-
+Pour le volume, les données OSM ne possédant pas l'attribut hauteur des bâtiments, nous ne pouvons pas comparer
+|                                | Périphérique | Centre | Mixte |
+|--------------------------------|--------------|--------|-------|
+|           Ecart-type           | 0.8          | 0.8    | 0.8   |
+|    Modification de géométrie   | 1.5          | 1.5    | 1.5   |
+| Rapport d'erreur sur le volume | 0.01         | 0.003  | 0.003 |
 ### 3.7 Volume avec modification de géométrie et suppression de bâtiments
 ![Aire/Modifgeom](Annexes/Autres/Volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
 
