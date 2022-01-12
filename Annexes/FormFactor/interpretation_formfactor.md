@@ -4,7 +4,7 @@
 Le form factor, ou facteur de forme en français est un indicateur qui caractérise la compacité au sol de la géométrie d'un bâtiment.
 C'est le ratio entre la surface au sol d'un bâtiment et le carré du périmètre de ce bâtiment.
 FACTEUR DE FORME = AIRE/(PERIMETRE)²
-Le facteur de forme le plus grand est le cercle, avec 0.080. Ainsi, moins le facteur de forme est grand, moins la géométrie est compacte.
+Le facteur de forme le plus grand est le cercle, il vaut 0.080. Ainsi, moins le facteur de forme est grand, moins la géométrie est compacte.
 
 ### Exemples de facteurs de formes
 0.018 :
