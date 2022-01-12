@@ -20,7 +20,7 @@ def Calcul_dist_bat_bat():
     arcpy.env.overwriteOutput = False
 
     entree = "zonePeri" #Mettre la couche que l'on souhaite.
-    #entree a été trouvée dans le workspace défini ligne 19.
+    #entree a été trouvée dans le workspace défini ligne 28.
     
     arcpy.analysis.Near(entree, entree, "100 Meters") #Renvoie pour chaque bâtiment, dans la colonne NEAR_DIST (il la crée si elle n'existe pas), la distance au bâtiment le plus proche, (entre les points de chacune des entités permettant la distance la plus courte, et non les barycentres).
 
