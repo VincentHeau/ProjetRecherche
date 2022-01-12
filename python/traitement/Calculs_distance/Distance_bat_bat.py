@@ -10,11 +10,12 @@ def Calcul_dist_bat_bat():
     # To allow overwriting outputs change overwriteOutput option to True.
     arcpy.env.overwriteOutput = False
 
-    entree = "donneesZonesBDTOPO\zonePeri.shp" #Mettre la couche que l'on souhaite.
-    #entree a été trouvée dans le workspace défini ligne 23.
+    entree = "zonePeri" #Mettre la couche que l'on souhaite.
+    #entree a été trouvée dans le workspace défini ligne 19.
     
     arcpy.analysis.Near(entree, entree, "100 Meters") #Renvoie pour chaque bâtiment, dans la colonne NEAR_DIST (il la crée si elle n'existe pas), la distance au bâtiment le plus proche, (entre les points de chacune des entités permettant la distance la plus courte, et non les barycentres).
 
 if __name__ == '__main__':
     with arcpy.EnvManager(scratchWorkspace="", workspace=""): #Ajouter dans scratchWorkspace et workspace l'emplacement des données source une fois ce fichier téléchargé.
+        #Il sera nécessaire de créer un fichier Arcgis, et d'insérer dans sa geodatabase (gdb) la couche que l'on souhaite traiter. Ces scratchWorkspace et workspace correspondront à l'emplacement de cette gdb.
         Calcul_dist_bat_bat()
