@@ -21,7 +21,7 @@ def Calcul_dist_bat_rue():
     arcpy.env.overwriteOutput = False
 
     zone = "zoneCentre" #Mettre la zone que l'on souhaite
-    Routes_Toulouse_OSM = "Routes_Toulouse_OSM" #zone et Routes_Toulouse_OSM ont été trouvées dans le workspace défini ligne 28.
+    Routes_Toulouse_OSM = "Routes_Toulouse_OSM" #zone et Routes_Toulouse_OSM ont été trouvées dans le workspace défini ligne 38.
 
     #Calculer la distance bat-rue 
     arcpy.analysis.Near(zone, Routes_Toulouse_OSM, "100 Meters") #Renvoie pour chaque bâtiment, dans la colonne NEAR_DIST (il la crée si elle n'existe pas), la distance à la route la plus proche, (entre les points de chacune des entités permettant la distance la plus courte, et non les barycentres).

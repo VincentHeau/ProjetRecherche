@@ -69,8 +69,6 @@ Pour chaque indicateur, on peut trouver des perturbations intéressantes à appl
 |              Suppression  de bâtiments            |                          |                  | OSM & BD TOPO | BD TOPO |                     |                      |
 |               Modification de géométrie           |  Sommets  des  polygones |   OSM & BD TOPO  | OSM & BD TOPO | BD TOPO |                     |                      |
 |                                                   | Hauteurs  des  bâtiments |                  |               | BD TOPO |                     |                      |
-|              Translation de bâtiments             |                          |                  |               |         |                     |                      |
-|              Dichotomie de bâtiments              |                          |                  |               |         |                     |                      |
 |              Fusion de bâtiments                  |                          |                  |               |         |                     |                      |
 
 
@@ -136,6 +134,16 @@ En conclusion ces résultats ne sont pas forcément concluant pour comparer la q
 
 ### 3.5 Volume et suppression de bâtiments 
 ![VolumeSuppression](/Annexes/Autres/volume_suppression.png "Volume et suppression de bâtiments")
+Observations similaires à celle de l'aire. Les conclusions sur les palliers sont les m^me que pour l'aire.
+
+En comparant les différentes zones, on a néanmoins le résultat suivant
+|                                | Périphérique | Centre | Mixte |
+|--------------------------------|--------------|--------|-------|
+|           Ecart-type           | 0.8          | 0.8    | 0.8   |
+|    Modification de géométrie   | 1.5          | 1.5    | 1.5   |
+| Rapport d'erreur sur le volume | 0.01         | 0.003  | 0.003 |
+
+On observe que l'erreur à écart-type et moyenne similaire est plus élevé pour la zone Périphérique. Cela s'explique par le fait que les maisons en zone Périphérique ont une hauteur moindre et que la modification de cet hauteur entraîne une grosse perturbation du volume, or cela n'est pas le cas pour les grands immeubles des zones Mixtes et Périphériques.
 
 ### 3.6 Volume et modification de géométrie
 ![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
@@ -147,7 +155,7 @@ Comme on l'observe ci-dessus, nous avons fait le choix d'afficher ici le résult
 Sur ce graphe, on observe que l'influence du taux de suppression sur le volume total de la couche de bâtiments est bien plus prépondérante que celle de la modification de géométrie. Si l'on s'intéresse à **l'intersection** entre le plan qui correspond à 5% d'erreur et la nappe obtenue, on a une légère courbure. Cependant malgré cela, on constate tout de même la forte influence du taux de suppression, *il est prépondérant*. En comparant les nappes pour les trois zones, on aurait du mal à en tirer des conclusions différentes de celles de la partie 3.5.
 
 ### 3.8 Commentaires sur les autres indicateurs et perturbations
-
+Pour ce qui est de la fusion voir le markdown correspondant dans le dossier Python/Perturbation. Les fonctions de calcul des distances Bati-Bati et distance Bati-Route sont également présentes dans ce fichier mais elles utilisent Arcpy (Arcgis) et les perturbations que nous avons implémentées ne sont pas pertinentes avec ces indicateurs.
 
 ## 4. Librairies et outils utilisés pour le développement
 
@@ -156,6 +164,7 @@ Les logiciels et ressources suivants ont été utilisés pour le développement 
 * [Spyder] (https://www.spyder-ide.org/) - Editeur de code
 * [Shapely] (https://pypi.org/project/Shapely/) - Géométrie des polygones
 * [Plotly] (https://plotly.com/python/) - Production de graphes
+* [Arcpy] (https://desktop.arcgis.com/fr/arcmap/10.3/analyze/arcpy/what-is-arcpy-.htm) - Module Python Arcgis
 
 Pour les couches de données
 * [BD TOPO] (www.ign.fr)
