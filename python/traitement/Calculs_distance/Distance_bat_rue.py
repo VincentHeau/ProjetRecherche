@@ -2,7 +2,9 @@
 Auteurs : Tristan FILLON, Vincent HEAU, Félix BAL
 Pour chaque bâtiment de la couche Arcgis stockée dans zone (ligne 18), remplit l'attribut NEAR_DIST, contenant la distance à la rue la plus proche. Les rues sont stockées dans la variable Routes_Toulouse_OSM (ligne 19).
 Etaes nécessaires à l'utilisation de ce script :
-    -Ouvrir un fichier Arcgis et y insérer le fichier Routes_Toulouse_OSM.shp (
+    -Ouvrir un fichier Arcgis et y insérer le fichier Routes_Toulouse_OSM.shp (présent sur ce Git dans ProjetRecherche/donneesRouteOSM/)
+    -
+
 """
 
 import arcpy
