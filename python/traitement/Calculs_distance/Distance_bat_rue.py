@@ -1,7 +1,7 @@
 """
 Auteurs : Tristan FILLON, Vincent HEAU, Félix BAL
-Pour chaque bâtiment de la couche Arcgis stockée dans zone (ligne 23), remplit l'attribut NEAR_DIST, contenant la distance à la rue la plus proche. Les rues sont stockées dans la variable Routes_Toulouse_OSM (ligne 24).
-Etaes nécessaires à l'utilisation de ce script :
+Pour chaque bâtiment de la couche Arcgis stockée dans zone (ligne 23), ce programme remplit l'attribut NEAR_DIST, contenant la distance à la rue la plus proche. Les rues sont stockées dans la variable Routes_Toulouse_OSM (ligne 24).
+Etapes nécessaires à l'utilisation de ce script :
     -Ouvrir un fichier Arcgis et y insérer le fichier Routes_Toulouse_OSM.shp (présent sur ce Git dans ProjetRecherche/donneesRouteOSM)
     -Y insérer également les fichiers .shp contenant les bâtiments des différentes zones traitées (dans ProjetRecherche/donneesZonesOSM et ProjetRecherche/donneesZonesBDTOPO)
     -Remplir le contenu des variables scratchWorkspace et workspace (ligne 38). Ils correspondent à l'emplacement de la geodatabase (et se terminent donc par .gdb) du fichier Arcgis créé.
