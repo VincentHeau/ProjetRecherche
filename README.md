@@ -81,13 +81,13 @@ Pour chaque indicateur, on peut trouver des perturbations intéressantes à appl
 Tout d'abord, les courbes sont décroissantes : plus l'erreur de positionnement est importante, plus le facteur de forme sera petit. Cela s'explique par le fait que les géométries obtenues sont de plus en plus tordues, et les angles deviennent très aigus ou obtus. Les bâtiments deviennent alors moins compacts, et leur facteur de forme diminue. Le facteur de forme est plus grand pour la zone périphérique, car les bâtiments sont originellement plus carrés que ceux du centre-ville. Ensuite, si l'on normalise les trois courbes, on se rend compte que celle de la zone périphérique décroît plus vite que les autres.
 
 
-**Aucune différence apparente entre les deux sources de données** 
+**Aucune différence apparente entre les deux sources de données**. 
 Le résultat du calcul de cet indicateur après modification de la géométrie est similaire pour les deux sources de données.
       
 ### 3.2 Aire et suppression de bâtiments
 ![Aire en fonction de la suppression de bâtiments](/Annexes/Autres/aire_suppression.png "Comparaison OSM-BDTOPO pour la suppression de bâtiments")
 
-**Réaction intéressante car elle dépend de la source de données** 
+**Réaction intéressante car elle dépend de la source de données**. 
 Pour OSM comme pour la BD TOPO, on calcule l'aire totale des bâtiments de la couche initiale (taux de suppression de 0). Ensuite, on perturbe les données en supprimant un taux de bâtiments (ce taux est la valeur présente sur l'axe des abscisses). La valeur en ordonnée lui correspondant est obtenue de la manière suivante :
 A chaque taux de suppression, on effectue vingt tirages aléatoires de bâtiments à supprimer dans la couche. Et pour chacun de ces tirages, on calcule la nouvelle aire totale. On fait ensuite la moyenne de ces tirages pour obtenir la nouvelle aire moyenne. La dernière opération consiste à faire le rapport entre cette aire moyenne et l'aire totale de la couche initiale.
 
