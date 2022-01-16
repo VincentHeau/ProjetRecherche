@@ -20,7 +20,12 @@ hauteur_loi_normale : Elle fonctionne de la même façon que coordonnees_loi_nor
 
 coordonnees_loi_normale_v2 : Il s'agit de la même fonction que coordonnees_loi_normale, avec une loi normale modifiée différemment. En effet on prend la valeur absolue de la loi normale.
 
+changement_sommet et changement_hauteur modifient les données d'entrée pour effectivement modifier les géométries (en utilisant les précédentes fonctions).
+
+
+
+
 ### Fusion de bâtiments
-Ce code utilise la librairie arcpy.
+Ce code utilise la librairie ArcPy.
 A partir d'une couche vectorielle d'Arcgis, il renvoie une autre couche, contenant les entités de la couche d'entrée fusionnées. Il ne modifie pas la couche d'entrée.
 Attention, la fusion de bâtiments n'est pas une perturbation en soi (les limites des zones bâties restent les mêmes). Il s'agit simplement d'une manière d'obtenir des valeurs de périmètres différentes, modifiant ainsi certains indicateurs comme le facteur de forme sans réellement modifier la géométrie.

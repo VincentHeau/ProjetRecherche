@@ -81,13 +81,13 @@ Pour chaque indicateur, on peut trouver des perturbations intéressantes à appl
 Tout d'abord, les courbes sont décroissantes : plus l'erreur de positionnement est importante, plus le facteur de forme sera petit. Cela s'explique par le fait que les géométries obtenues sont de plus en plus tordues, et les angles deviennent très aigus ou obtus. Les bâtiments deviennent alors moins compacts, et leur facteur de forme diminue. Le facteur de forme est plus grand pour la zone périphérique, car les bâtiments sont originellement plus carrés que ceux du centre-ville. Ensuite, si l'on normalise les trois courbes, on se rend compte que celle de la zone périphérique décroît plus vite que les autres.
 
 
-**Aucune différence apparente entre les deux sources de données** 
+**Aucune différence apparente entre les deux sources de données**. 
 Le résultat du calcul de cet indicateur après modification de la géométrie est similaire pour les deux sources de données.
       
 ### 3.2 Aire et suppression de bâtiments
 ![Aire en fonction de la suppression de bâtiments](/Annexes/Autres/aire_suppression.png "Comparaison OSM-BDTOPO pour la suppression de bâtiments")
 
-**Réaction intéressante car elle dépend de la source de données** 
+**Réaction intéressante car elle dépend de la source de données**. 
 Pour OSM comme pour la BD TOPO, on calcule l'aire totale des bâtiments de la couche initiale (taux de suppression de 0). Ensuite, on perturbe les données en supprimant un taux de bâtiments (ce taux est la valeur présente sur l'axe des abscisses). La valeur en ordonnée lui correspondant est obtenue de la manière suivante :
 A chaque taux de suppression, on effectue vingt tirages aléatoires de bâtiments à supprimer dans la couche. Et pour chacun de ces tirages, on calcule la nouvelle aire totale. On fait ensuite la moyenne de ces tirages pour obtenir la nouvelle aire moyenne. La dernière opération consiste à faire le rapport entre cette aire moyenne et l'aire totale de la couche initiale.
 
@@ -109,14 +109,15 @@ Date des données utilisées :  * BD TOPO Haute Garonne (31) ( Mars 2021 )
 ![Source OSM](/Annexes/Autres/source_osm.png "Source OSM")
 
 ![Source BD_TOPO](/Annexes/Autres/sources_bdtopo.png "Source BD_TOPO")
+
 ** Les sources pour l'obtention des données de la BD TOPO **
 
-C'est dans la manière dont sont produites les données que l'on peut comprendre les différences qui existent entre les données d'OpenStreetMap et celles de l'IGN.
+C'est dans la manière dont sont produites les données que l'on peut comprendre les différences qui existent entre celles d'OpenStreetMap et celles de l'IGN.
 Comme on le voit sur les images précédentes, les données OSM ne sont pas mises à jour depuis 2009 en ce qui concerne les bâtiments de cet îlot. De plus elles ne sont pas contrôlées contrairement aux données de l'IGN.
 
 
 **Qu'en conclure sur la qualité des données ?**
-Si l'on a besoin de calculer l'indicateur AIRE TOTALE pour une couche de bâtiments, alors on a intérêt à prendre les données de la BD TOPO plutôt que celles d'OSM. Avec la BD TOPO, si des erreurs d'insertion sont présentes, l'AIRE TOTALE a de forte chance d'être proche de l'AIRE TOTALE VRAIE qui correspond à l'aire d'une couche de données parafaitement juste. Ce n'est pas le cas avec OSM. De plus, cela est d'autant plus vrai en centre-ville où les îlots urbains comporte une multitude de bâtiments.
+Si l'on a besoin de calculer l'indicateur AIRE TOTALE pour une couche de bâtiments, alors on a intérêt à prendre les données de la BD TOPO plutôt que celles d'OSM. Avec la BD TOPO, si des erreurs d'insertion sont présentes, l'AIRE TOTALE a de forte chance d'être proche de l'AIRE TOTALE VRAIE qui correspond à l'aire d'une couche de données parafaitement juste. Ce n'est pas le cas avec OSM, en particulier en centre-ville où les îlots urbains comportent une multitude de bâtiments.
 
 ### 3.3 Aire et modification de géométrie
 ![Aire/Modifgeom](Annexes/Autres/aire_modification.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
@@ -128,25 +129,30 @@ Malheureusement, on n'observe aucune différence majeure entre les nappes de cha
 
 En conclusion ces résultats ne sont pas forcément concluant pour comparer la qualité des données OSM et BD TOPO.
 
-### 3.4 avec modification de géométrie et suppression de bâtiments
+### 3.4 Aire avec modification de géométrie et suppression de bâtiments
 ![Légende](Annexes/Autres/legende.png "legende")
-![Aire/Modifgeom](Annexes/Autres/aire_modification&suppression.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
+![Aire/Modifgeom](Annexes/Autres/nappe_aire_OSM_BDTOPO.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
+
+Pour ce qui est de l'interprétation, cette nappe en 3D réalisée pour la zone Mixte n'apporte pas beaucoup d'informations supplémentaires par rapport à la partie 3.2. 
 
 ### 3.5 Volume et suppression de bâtiments 
 ![VolumeSuppression](/Annexes/Autres/volume_suppression.png "Volume et suppression de bâtiments")
-Observations similaires à celle de l'aire. Les conclusions sur les palliers sont les m^me que pour l'aire.
+Observations similaires à celle de l'aire. Les conclusions sur les palliers sont les mêmes que pour l'aire.
+L'ajout de la hauteur comme objet supplémentaire dont on modifie la géométrie ne semble pas changer les conclusions que nous pouvions déjà tirer sur l'aire. 
 
-En comparant les différentes zones, on a néanmoins le résultat suivant
+### 3.6 Volume et modification de géométrie
+![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
+
+Pour le volume, les données OSM ne possédant pas l'attribut hauteur des bâtiments, nous ne pouvons pas comparer ces sources de données entre elles.
+En revanche, il est intéressant de voir les différences entre les nappes de chaleur pour les trois zones. L'échantillon présent dans le tableau ci-dessous est représentatif de l'ensemble des trois nappes.
 |                                | Périphérique | Centre | Mixte |
 |--------------------------------|--------------|--------|-------|
 |           Ecart-type           | 0.8          | 0.8    | 0.8   |
 |    Modification de géométrie   | 1.5          | 1.5    | 1.5   |
 | Rapport d'erreur sur le volume | 0.01         | 0.003  | 0.003 |
 
-On observe que l'erreur à écart-type et moyenne similaire est plus élevé pour la zone Périphérique. Cela s'explique par le fait que les maisons en zone Périphérique ont une hauteur moindre et que la modification de cet hauteur entraîne une grosse perturbation du volume, or cela n'est pas le cas pour les grands immeubles des zones Mixtes et Périphériques.
-
-### 3.6 Volume et modification de géométrie
-![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
+On observe que si l'erreur sur le volume est sensiblement la même à paramètres égaux pour les zones Centre et Mixte, il existe une différence notable en ce qui concerne la zone Périphérique où l'on peut observer un rapport d'erreur sur le volume bien plus important. 
+Cela est lié au fait que le volume prend en compte la hauteur des bâtiments. Or la moyenne pour la modification de géométrie s'applique de la même manière sur les sommets des bâtiments que sur leur hauteur. Comme les bâtiments de la zone Périphérique sont généralement des maisons pavillonaires, alors la perturbation appliquée sur la hauteur entraîne une plus forte erreur que sur les grands immeubles des zones Centre et Mixte. 
 
 ### 3.7 Volume avec modification de géométrie et suppression de bâtiments
 ![Aire/Modifgeom](Annexes/Autres/Volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
