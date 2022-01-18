@@ -87,37 +87,7 @@ Le résultat du calcul de cet indicateur après modification de la géométrie e
 ### 3.2 Aire et suppression de bâtiments
 ![Aire en fonction de la suppression de bâtiments](/Annexes/Autres/aire_suppression.png "Comparaison OSM-BDTOPO pour la suppression de bâtiments")
 
-**Réaction intéressante car elle dépend de la source de données**. 
-Pour OSM comme pour la BD TOPO, on calcule l'aire totale des bâtiments de la couche initiale (taux de suppression de 0). Ensuite, on perturbe les données en supprimant un taux de bâtiments (ce taux est la valeur présente sur l'axe des abscisses). La valeur en ordonnée lui correspondant est obtenue de la manière suivante :
-A chaque taux de suppression, on effectue vingt tirages aléatoires de bâtiments à supprimer dans la couche. Et pour chacun de ces tirages, on calcule la nouvelle aire totale. On fait ensuite la moyenne de ces tirages pour obtenir la nouvelle aire moyenne. La dernière opération consiste à faire le rapport entre cette aire moyenne et l'aire totale de la couche initiale.
 
-On observe clairement sur le graphique ci-dessus que les réactions aux suppressions sont différentes. Cela s'explique par la façon dont sont acquises et fabriquées les données de la BD TOPO et celles d'OSM. Pour l'expliquer, concentrons-nous sur la zone centre (*représentée en bleu sur les graphes*). 
-
-Sur ces zones, on observe pour la BD TOPO, un pallier proche de 1 pour des taux de suppression faibles. Ainsi, lorsque l'on tire au hasard un faible nombre de bâtiments à supprimer et que l'on calcule l'aire après suppression, cette dernière est proche de l'aire initiale. Pour mieux le comprendre, il faut visualiser une représentation cartographique de la zone Centre. Pour la BD TOPO, on y observe **460 bâtiments**. Parmi ces bâtiments, on en compte quelques uns assez imposants et beaucoup de petits qui sont côte à côte et qui forment des îlots urbains. La forme de cette courbe indique que tant que l'on ne supprime pas plus de 5% des bâtiments de la zone Centre, on a une aire proche de l'aire initiale. Comme les bâtiments à supprimer sont tirés au hasard, on a beaucoup de chance de n'en supprimer que des petits qui n'influencent pas beaucoup l'aire totale. Dès que l'on dépasse 5% (environ) de suppression, on a plus de chance de supprimer les gros bâtiments ce qui explique la décroissance importante à plus de 5% de suppression.
-
-Pour les données OSM, le comportement est très différent, ce pallier n'étant pas présent. Lorsque l'on regarde la couche de données OSM sur la même emprise, on ne perçoit pas au premier abord ce qui peut expliquer ce comportement différent. En regardant les entités de la couche, on  observe **388 bâtiments soit presque 100 de moins que pour la BD TOPO**. Or, l'emprise est la même, et en regardant rapidement les deux couches, celles-ci semblent identiques.
-Mais, en zoomant précisant sur les îlots urbains, on observe qu'un îlot urbain est divisé en plus de bâtiments pour la BD TOPO que pour OSM.
-
-*On le voit en particulier sur la figure suivante*
-![Couche OSM vs BD TOPO](/Annexes/Autres/comparaison_airesup.png "Comparaison de couches OSM-BDTOPO pour la suppression de bâtiments")
-
-**Comment expliquer ces différences de découpages ?**
-Date des données utilisées :  * BD TOPO Haute Garonne (31) ( Mars 2021 )
-                              * OSM dernière version (mise à jour fin 2021-début 2022)
-
-
-![Source OSM](/Annexes/Autres/source_osm.png "Source OSM")
-
-![Source BD_TOPO](/Annexes/Autres/sources_bdtopo.png "Source BD_TOPO")
-
-** Les sources pour l'obtention des données de la BD TOPO **
-
-C'est dans la manière dont sont produites les données que l'on peut comprendre les différences qui existent entre celles d'OpenStreetMap et celles de l'IGN.
-Comme on le voit sur les images précédentes, les données OSM ne sont pas mises à jour depuis 2009 en ce qui concerne les bâtiments de cet îlot. De plus elles ne sont pas contrôlées contrairement aux données de l'IGN.
-
-
-**Qu'en conclure sur la qualité des données ?**
-Si l'on a besoin de calculer l'indicateur AIRE TOTALE pour une couche de bâtiments, alors on a intérêt à prendre les données de la BD TOPO plutôt que celles d'OSM. Avec la BD TOPO, si des erreurs d'insertion sont présentes, l'AIRE TOTALE a de forte chance d'être proche de l'AIRE TOTALE VRAIE qui correspond à l'aire d'une couche de données parafaitement juste. Ce n'est pas le cas avec OSM, en particulier en centre-ville où les îlots urbains comportent une multitude de bâtiments.
 
 ### 3.3 Aire et modification de géométrie
 ![Aire/Modifgeom](Annexes/Autres/aire_modification.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
