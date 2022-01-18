@@ -100,15 +100,8 @@ Malheureusement, on n'observe aucune différence majeure entre les nappes de cha
 En conclusion ces résultats ne sont pas forcément concluant pour comparer la qualité des données OSM et BD TOPO.
 
 ### 3.4 Aire avec modification de géométrie et suppression de bâtiments
-![Légende](Annexes/Autres/legende.png "legende")
-![Aire/Modifgeom](Annexes/Autres/nappe_aire_OSM_BDTOPO.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
-
-Pour ce qui est de l'interprétation, cette nappe en 3D réalisée pour la zone Mixte n'apporte pas beaucoup d'informations supplémentaires par rapport à la partie 3.2. 
 
 ### 3.5 Volume et suppression de bâtiments 
-$![VolumeSuppression](/Annexes/Autres/volume_suppression.png "Volume et suppression de bâtiments")
-Observations similaires à celle de l'aire. Les conclusions sur les palliers sont les mêmes que pour l'aire.
-L'ajout de la hauteur comme objet supplémentaire dont on modifie la géométrie ne semble pas changer les conclusions que nous pouvions déjà tirer sur l'aire. $
 
 ### 3.6 Volume et modification de géométrie
 ![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
@@ -125,11 +118,14 @@ On observe que si l'erreur sur le volume est sensiblement la même à paramètre
 Cela est lié au fait que le volume prend en compte la hauteur des bâtiments. Or la moyenne pour la modification de géométrie s'applique de la même manière sur les sommets des bâtiments que sur leur hauteur. Comme les bâtiments de la zone Périphérique sont généralement des maisons pavillonaires, alors la perturbation appliquée sur la hauteur entraîne une plus forte erreur que sur les grands immeubles des zones Centre et Mixte. 
 
 ### 3.7 Volume avec modification de géométrie et suppression de bâtiments
-![Aire/Modifgeom](Annexes/Autres/Volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
+![Aire/Modifgeom](Annexes/Autres/volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
+**Pour la zone Centre**
+
+![Aire/Modifgeom](Annexes/Autres/volume_suppression&modification_zonemixte.png "Volume en fonction de la suppression et modification de bâtiments")
+**Pour la zone Mixte**
 
 Comme on l'observe ci-dessus, nous avons fait le choix d'afficher ici le résultat sur la Zone Centre de Toulouse. Pour les autres zones, le comportement est le même.
-Sur ce graphe, on observe que l'influence du taux de suppression sur le volume total de la couche de bâtiments est bien plus prépondérante que celle de la modification de géométrie. Si l'on s'intéresse à **l'intersection** entre le plan qui correspond à 5% d'erreur et la nappe obtenue, on a une légère courbure. Cependant malgré cela, on constate tout de même la forte influence du taux de suppression, *il est prépondérant*. En comparant les nappes pour les trois zones, on aurait du mal à en tirer des conclusions différentes de celles de la partie 3.5.
-
+Sur ce graphe, on observe que l'influence du taux de suppression sur le volume total de la couche de bâtiments est bien plus prépondérante que celle de la modification de géométrie. Si l'on s'intéresse à **l'intersection** entre le plan qui correspond à 5% d'erreur et la nappe obtenue, on a une légère courbure. Cependant malgré cela, on constate tout de même la forte influence du taux de suppression, *il est prépondérant*. 
 ### 3.8 Commentaires sur les autres indicateurs et perturbations
 Pour ce qui est de la fusion voir le markdown correspondant dans le dossier Python/Perturbation. Les fonctions de calcul des distances Bati-Bati et distance Bati-Route sont également présentes dans ce fichier mais elles utilisent Arcpy (Arcgis) et les perturbations que nous avons implémentées ne sont pas pertinentes avec ces indicateurs.
 
@@ -147,7 +143,7 @@ Pour les couches de données
 * [OSM] (https://www.openstreetmap.org)
 
 ## 5. Versions
-0.5
+0.6
 
 
 ## 6. Auteurs
