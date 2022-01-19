@@ -73,6 +73,7 @@ Pour chaque indicateur, on peut trouver des perturbations intéressantes à appl
 |                                                   | Hauteurs  des  bâtiments |                  |               | BD TOPO |                     |                      |
 |              Fusion de bâtiments                  |                          |                  |               |         |                     |                      |
 
+Une perturbation supplémentaire qui a été envisagée correspond à la translation de bâtiments. Cependant, le problème de superposition des bâtiments dans des zones denses comme au niveau du centre-ville de Toulouse reste majeur. La superposition des bâtiments reste un obstacle lorsque l'on souhaite calculer des distances bâtiments-route ou encore des distances bâti-bâti.
 
 ## 3. Résultats
 ### 3.1 Facteur de forme et modification de géométrie
