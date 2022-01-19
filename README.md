@@ -85,9 +85,9 @@ Une perturbation supplémentaire qui a été envisagée correspond à la transla
 Tout d'abord, les courbes sont décroissantes : plus l'erreur de positionnement est importante, plus le facteur de forme sera petit. Cela s'explique par le fait que les géométries obtenues sont de plus en plus tordues, et les angles deviennent très aigus ou obtus. Les bâtiments sont alors moins compacts, et leur facteur de forme diminue.
 Les exemples présentés dans le fichier [interpretation_formfactor.md](/Annexes/FormFactor/interpretation_formfactor.md) permettent de bien le visualiser.
 Le facteur de forme est plus grand pour la zone périphérique, car les bâtiments sont originellement plus carrés que ceux du centre-ville.
-En zone périphérique, le modèle de logement est celui des maisons pavillonaires, ce qui diffère avec les barres d'immeubles du centre-ville.
+En zone périphérique, le modèle de logement est celui des maisons pavillonaires, ce qui diffère d'avec les barres d'immeubles du centre-ville.
 
-Lorsque la moyenne des modifications de géométrie est assez importante, les résultats tendent à être similaires pour les 3 zones. En effet, au dessus de 3m, on peut considérer que la perturbation n'est pas réaliste et que les déformations sont telles que polygones de la couche n'ont plus rien à voir avec leur forme initiale. 
+Lorsque la moyenne des modifications de géométrie est assez importante, les résultats tendent à être similaires pour les trois zones. En effet, au dessus de 3m, on peut considérer que la perturbation n'est pas réaliste et que les déformations sont telles que polygones de la couche n'ont plus rien à voir avec leur forme initiale. 
 
 **Aucune différence apparente ou suffisamment marquante pour être notée entre les deux sources de données**. 
 Le résultat du calcul de cet indicateur après modification de la géométrie est similaire pour OSM et pour la BD TOPO.
