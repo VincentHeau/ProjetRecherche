@@ -170,7 +170,7 @@ Voici les nappes des trois zones d'étude :
 
 ![Volume/Modifgeom](Annexes/Autres/a3.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments (Zone Périphérique)")
 
-Pour les 3 zones, les nappes se ressemblent, mais malgré les ressemblances, on distingue des écarts intéressants sur les valeurs d'erreur. on en extrait un échantillon dans le tableau suivant:
+Pour les trois zones, les nappes se ressemblent, mais malgré les ressemblances, on distingue des écarts intéressants sur les valeurs d'erreur. On en extrait un échantillon dans le tableau suivant :
 
 
 |                                | Périphérique | Centre | Mixte |
