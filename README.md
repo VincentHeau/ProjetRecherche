@@ -185,14 +185,20 @@ Cela est lié au fait que le volume prend en compte la hauteur des bâtiments. O
 *Ce résultat certes intéressant n'est malgré tout pas un résultat sur la qualité des données.*
 
 ### 3.7 Volume avec modification de géométrie et suppression de bâtiments
-![Aire/Modifgeom](Annexes/Autres/volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
+![Volume/ModifgeomSup](Annexes/Autres/volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments (Zone Centre)")
 **Pour la zone Centre**
 
-![Aire/Modifgeom](Annexes/Autres/volume_suppression&modification_zonemixte.png "Volume en fonction de la suppression et modification de bâtiments")
+![Volume/ModifgeomSup](Annexes/Autres/volume_suppression&modification_zonemixte.png "Volume en fonction de la suppression et modification de bâtiments (Zone Mixte)")
+**Pour la zone Mixte**
+
+![Volume/ModifgeomSup](Annexes/Autres/volume_suppression&modification_zoneperi.png "Volume en fonction de la suppression et modification de bâtiments (Zone Périphérique)")
 **Pour la zone Mixte**
 
 Comme on l'observe ci-dessus, nous avons fait le choix d'afficher ici le résultat sur la Zone Centre de Toulouse. Pour les autres zones, le comportement est le même.
-Sur ce graphe, on observe que l'influence du taux de suppression sur le volume total de la couche de bâtiments est bien plus prépondérante que celle de la modification de géométrie. Si l'on s'intéresse à **l'intersection** entre le plan qui correspond à 5% d'erreur et la nappe obtenue, on a une légère courbure. Cependant malgré cela, on constate tout de même la forte influence du taux de suppression, *il est prépondérant*. 
+Sur ce graphe, on observe que l'influence du taux de suppression sur le volume total de la couche de bâtiments est bien plus prépondérante que celle de la modification de géométrie. Si l'on s'intéresse à **l'intersection** entre le plan qui correspond à 5% d'erreur et la nappe obtenue, on a une légère courbure, que l'on expliquait en 2D avec les nappes de chaleur précédentes. Cependant malgré cela, on constate tout de même la forte influence du taux de suppression, *il est prépondérant*. 
+
+Enfin, il est intéressant de noter que pour la zone périphérique, l'erreur de 5% sur le volume peut être atteinte pour un taux de suppression faible. Cela est lié au fait que les bâtiments sont plus petits et moins hauts en zone périphérique et donc que les perturbations identiques aux autres zones ont plus de répercutions.
+
 ### 3.8 Commentaires sur les autres indicateurs et perturbations
 Pour ce qui est de la fusion voir le markdown correspondant dans le dossier Python/Perturbation. Les fonctions de calcul des distances Bati-Bati et distance Bati-Route sont également présentes dans ce fichier mais elles utilisent Arcpy (Arcgis) et les perturbations que nous avons implémentées ne sont pas pertinentes avec ces indicateurs.
 
