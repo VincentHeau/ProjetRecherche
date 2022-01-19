@@ -81,11 +81,16 @@ Une perturbation supplémentaire qui a été envisagée correspond à la transla
 ![Résultats pour la BDTOPO](/Annexes/Autres/Formfactor_BDTOPO.png "Résultats sur le facteur de forme pour la BD TOPO")
 ** Pour les données OSM **
 ![Résultats pour OSM](/Annexes/Autres/Formfactor_OSM.png "Résulats sur le facteur de forme pour OSM")
-Tout d'abord, les courbes sont décroissantes : plus l'erreur de positionnement est importante, plus le facteur de forme sera petit. Cela s'explique par le fait que les géométries obtenues sont de plus en plus tordues, et les angles deviennent très aigus ou obtus. Les bâtiments deviennent alors moins compacts, et leur facteur de forme diminue. Le facteur de forme est plus grand pour la zone périphérique, car les bâtiments sont originellement plus carrés que ceux du centre-ville. Ensuite, si l'on normalise les trois courbes, on se rend compte que celle de la zone périphérique décroît plus vite que les autres.
 
+Tout d'abord, les courbes sont décroissantes : plus l'erreur de positionnement est importante, plus le facteur de forme sera petit. Cela s'explique par le fait que les géométries obtenues sont de plus en plus tordues, et les angles deviennent très aigus ou obtus. Les bâtiments sont alors moins compacts, et leur facteur de forme diminue.
+Les exemples présentés dans le fichier [interpretation_formfactor.md](/Annexes/FormFactor/interpretation_formfactor.md) permettent de bien le visualiser
+Le facteur de forme est plus grand pour la zone périphérique, car les bâtiments sont originellement plus carrés que ceux du centre-ville.
+En zone périphérique, le modèle de logement est celui des maisons pavillonaires, ce qui diffère avec les barres d'immeubles du centre-ville.
 
-**Aucune différence apparente entre les deux sources de données**. 
-Le résultat du calcul de cet indicateur après modification de la géométrie est similaire pour les deux sources de données.
+Lorsque la moyenne des modifications de géométrie est assez importante, les résultats tendent à être similaires pour les 3 zones. En effet, au dessus de 3m, on peut considérer que la perturbation n'est pas réaliste et que les déformations sont telles que polygones de la couche n'ont plus rien à voir avec leur forme initiale. 
+
+**Aucune différence apparente ou suffisamment marquante pour être notée entre les deux sources de données**. 
+Le résultat du calcul de cet indicateur après modification de la géométrie est similaire pour OSM et pour la BD TOPO.
       
 ### 3.2 Aire et suppression de bâtiments
 ![Aire en fonction de la suppression de bâtiments](/Annexes/Autres/aire_suppression.png "Comparaison OSM-BDTOPO pour la suppression de bâtiments")
@@ -107,7 +112,7 @@ Il est intéressant d'observer les résulats en particulier pour la zone Centre 
 ![Aire en fonction de la suppression de bâtiments dans l'ordre des aires croissantes](/Annexes/Autres/source_osm.png "Sources des données OSM")
 ** Sources des données OSM **
 
-![Aire en fonction de la suppression de bâtiments dans l'ordre des aires croissantes](/Annexes/Autres/source_bdtopo.png "Sources des données BD TOPO")
+![Aire en fonction de la suppression de bâtiments dans l'ordre des aires croissantes](/Annexes/Autres/sources_bdtopo.png "Sources des données BD TOPO")
 ** Sources des données BD TOPO **
 
 On constate que les données BD TOPO présentent plus de bâtiments que les données OSM (460 pour BD TOPO contre 388 pour OSM dans la zone centre) pour une zone similaire. Comme on le voit sur l'échantillon de zone présenté ci-dessus, les bâtiments OSM recoupent de nombreux bâtiments IGN. Ainsi les données IGN présentent un découpage plus fin des bâtiments. Cette différence peut s'expliquer en comparant la manière dont sont produites les données
@@ -129,17 +134,45 @@ Malheureusement, on n'observe aucune différence majeure entre les nappes de cha
 
 En conclusion ces résultats ne sont pas forcément concluant pour comparer la qualité des données OSM et BD TOPO.
 
-Ci_dessous, 
+Ci-dessous, voici les résultats pour les autres zones :
+
+![Aire/Modifgeom [Zone Centre]](Annexes/Autres/aire_modification_zonecentre.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments [Zone Centre]")
+
+
+![Aire/Modifgeom [ZonePériphérique]](Annexes/Autres/aire_modification_zoneperi.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments [Zone Périphérique]")
 
 ### 3.4 Aire avec modification de géométrie et suppression de bâtiments
 
+
 ### 3.5 Volume et suppression de bâtiments 
+![Volume/Suppression](Annexes/Autres/volume_suppression.png "Courbe représentant l'évolution de l'erreur sur le volume en fonction du taux de suppression des bâtiments")
+
+De manière similaire à l'aire, il n'y a aucun résultat intéressant à tirer de ce couple car la courbe obtenue se rapproche d'une droite dont on peut déterminer le coefficient directeur par un calcul. En effet, plus on diminue le nombre de bâtiments, plus le volume diminue et cela de manière proportionnelle lorsque les bâtiments sont supprimés au hasard.
+
 
 ### 3.6 Volume et modification de géométrie
+
 ![Volume/Modifgeom](Annexes/Autres/volume_modification.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments")
 
-Pour le volume, les données OSM ne possédant pas l'attribut hauteur des bâtiments, nous ne pouvons pas comparer ces sources de données entre elles.
-En revanche, il est intéressant de voir les différences entre les nappes de chaleur pour les trois zones. L'échantillon présent dans le tableau ci-dessous est représentatif de l'ensemble des trois nappes.
+Étudier le volume des bâtiments permet de mêler les attributs de hauteur de la base de donnée avec la géométrie des bâtiments. Il n'est malheureusement pas possible de comparer BD TOPO et OSM sur ce type d'indicateur car les données OSM ne possèdent pas l'attribut "hauteur des bâtiments".
+
+Pour le calcul du volume avec une incertitude sur la géométrie, on obtient une carte de chaleur.
+La couleur est la coordonnée z qui correspond au taux d'erreur sur le volume c'est à dire le rapport entre le volume calculé avec la perturbation et le volume initial (cela sur une moyenne de 10 tirages aléatoires indépendants). La perturbation est une modification de géométrie déterminée par une moyenne (coordonnée y) et un écart-type(coordonnée x)
+
+Il est intéressant de noter que l'erreur sur le volume dépasse 2% lorsque l'erreur sur la géométrie dépasse 2.5m (ce qui est déjà suffisant pour déformer la couche d'une manière peu réaliste). Cependant, cette valeur peut être atteinte pour de grands écart-types. La ligne rouge présente une séparation grossière des zones où l'erreur sur le volume peut dépasser 2%.
+
+Pour le volume, les données OSM ne possédant pas l'attribut hauteur des bâtiments, nous ne pouvons pas comparer ces sources de données entre elles. En revanche, il est intéressant de voir les différences entre les nappes de chaleur pour les trois zones. L'échantillon présent dans le tableau ci-dessous est représentatif de l'ensemble des trois nappes. Il a été obtenue en regardant l'erreur obtenue sur le volume avec des écart-types et des moyennes fixées.
+Voici les nappes des trois zones d'étude :
+
+![Volume/Modifgeom](Annexes/Autres/a1.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments (Zone Mixte)")
+
+![Volume/Modifgeom](Annexes/Autres/a2.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments (Zone Centre)")
+
+![Volume/Modifgeom](Annexes/Autres/a3.png "Nappe de chaleur présentant le taux d'erreur sur le volume en fonction de la modification des bâtiments (Zone Périphérique)")
+
+Pour les 3 zones, les nappes se ressemblent, mais malgré les ressemblances, on distingue des écarts intéressants sur les valeurs d'erreur. on en extrait un échantillon dans le tableau suivant:
+
+
 |                                | Périphérique | Centre | Mixte |
 |--------------------------------|--------------|--------|-------|
 |           Ecart-type           | 0.8          | 0.8    | 0.8   |
@@ -148,6 +181,8 @@ En revanche, il est intéressant de voir les différences entre les nappes de ch
 
 On observe que si l'erreur sur le volume est sensiblement la même à paramètres égaux pour les zones Centre et Mixte, il existe une différence notable en ce qui concerne la zone Périphérique où l'on peut observer un rapport d'erreur sur le volume bien plus important. 
 Cela est lié au fait que le volume prend en compte la hauteur des bâtiments. Or la moyenne pour la modification de géométrie s'applique de la même manière sur les sommets des bâtiments que sur leur hauteur. Comme les bâtiments de la zone Périphérique sont généralement des maisons pavillonaires, alors la perturbation appliquée sur la hauteur entraîne une plus forte erreur que sur les grands immeubles des zones Centre et Mixte. 
+
+*Ce résultat certes intéressant n'est malgré tout pas un résultat sur la qualité des données.*
 
 ### 3.7 Volume avec modification de géométrie et suppression de bâtiments
 ![Aire/Modifgeom](Annexes/Autres/volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments")
