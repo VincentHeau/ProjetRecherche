@@ -206,10 +206,10 @@ Pour ce qui est de la fusion, voir le markdown correspondant dans le dossier Pyt
 
 Les logiciels et ressources suivants ont été utilisés pour le développement du projet :
 
-* [Spyder] (https://www.spyder-ide.org/) - Editeur de code
-* [Shapely] (https://pypi.org/project/Shapely/) - Géométrie des polygones
-* [Plotly] (https://plotly.com/python/) - Production de graphes
-* [Arcpy] (https://desktop.arcgis.com/fr/arcmap/10.3/analyze/arcpy/what-is-arcpy-.htm) - Module Python Arcgis
+* [Spyder](https://www.spyder-ide.org/) - Editeur de code
+* [Shapely](https://pypi.org/project/Shapely/) - Géométrie des polygones
+* [Plotly](https://plotly.com/python/) - Production de graphes
+* [Arcpy](https://desktop.arcgis.com/fr/arcmap/10.3/analyze/arcpy/what-is-arcpy-.htm) - Module Python Arcgis
 
 Pour les couches de données
 * [BD TOPO] (www.ign.fr)
