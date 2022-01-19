@@ -1,4 +1,0 @@
-SI=[i/10 for i in range(20)]
-MU=[i/10 for i in range(50)]
-
-10 tirages aléatoires à chaque fois
