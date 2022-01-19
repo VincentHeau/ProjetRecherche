@@ -102,7 +102,7 @@ Cependant nous avons remarqué que nous pouvions faire ressortir des différence
 
 Ainsi, avec cette méthode, plus le taux de suppression augmente, plus nous supprimons de gros bâtiments. Les bâtiments les plus petits sont supprimés en premier, d'où une décroissance faible pour des taux de suppression faibles. Ensuite, quand le taux de suppression augmente, la pente des courbes augmente car la suppression concerne plus particulièrement les gros bâtiments. 
 
-Il est intéressant d'observer les résulats en particulier pour la zone Centre en bleu sur les courbes. En effet, on observe que pour la zone centre, la décroissance est plus rapide pour les données OSM que pour les données BD TOPO. \\
+Il est intéressant d'observer les résulats en particulier pour la zone Centre en bleu sur les courbes. En effet, on observe que pour cette zone, la décroissance est plus rapide pour les données OSM que pour les données BD TOPO. \
 
 **Comment expliquer ces différences entre les courbes des données OSM et BD TOPO?**
 
