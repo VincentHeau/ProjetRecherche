@@ -35,7 +35,7 @@
 ## 1. Architecture du projet Git
 ### 1.1 Données d'entrée
 Les données d'entrée sont présentes sous forme de Shapefile dans les dossiers *donneesZoneOSM* et *donneesZoneBDTOPO*. Les fichiers présents dans ces dossiers sont des fichiers Shapefile.
-En ce qui concerne les codes pour les paramètres **Facteur de forme**, **Aire** et **Volume**, les données en entrée correspondent aux fichiers JSON du dossier. *Fichier_JSON*
+En ce qui concerne les codes pour les paramètres **Facteur de forme**, **Aire** et **Volume**, les données en entrée correspondent aux fichiers JSON du dossier *Fichier_JSON*0
 
 Zones sélectionnées :
 
@@ -44,8 +44,8 @@ Zones sélectionnées :
       3. Zone Périphérique (Zone située en banlieue pavillonaire de Toulouse 400m sur 400m)
 
 
-Ci-dessous, une carte présentant les zones utilisées
-![Carte des zones à Toulouse](/Annexes/Autres/zone.png "Les 3 zones utilisées dans les tests pour ce projet").
+Ci-dessous, une carte présentant les zones utilisées.
+![Carte des zones à Toulouse](/Annexes/Autres/zone.png "Les 3 zones utilisées dans les tests pour ce projet")
 
 Le code de notre projet se situe dans le dossier *python*. 
 A l'ouverture du dossier *python*, on trouve un code par indicateur ainsi que des dossiers *perturbations* et *traitement*. Ils comportent des codes réutilisables, effectuant des traitements sur les fichiers JSON correspondants aux couches précédentes.
