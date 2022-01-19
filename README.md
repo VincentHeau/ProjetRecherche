@@ -94,7 +94,7 @@ Le résultat du calcul de cet indicateur après modification de la géométrie e
       
 ### 3.2 Aire et suppression de bâtiments
 ![Aire en fonction de la suppression de bâtiments](/Annexes/Autres/aire_suppression.png "Comparaison OSM-BDTOPO pour la suppression de bâtiments")
-On observe des courbes linéaires, ainsi, lorsque l'on supprime un certain pourcentage de bâtiments, il en résulte une diminution du rapport entre l'aire obtenue après suppression et l'aire initiale. C'est une relation de proportionnalité qui n'est malheureusement pas intéressante puisqu'elle peut se démontrer mathématiquement.
+On observe des courbes linéaires. Ainsi, lorsque l'on supprime un certain pourcentage de bâtiments, il en résulte une diminution du rapport entre l'aire obtenue après suppression et l'aire initiale. C'est une relation de proportionnalité qui n'est malheureusement pas intéressante puisqu'elle peut se démontrer mathématiquement.
 
 Cependant nous avons remarqué que nous pouvions faire ressortir des différences entre les sources de données en choisissant l'ordre dans lequel on supprime les bâtiments. En effet, en ordonnant les bâtiments selon leurs aires croissantes, et en supprimant ces derniers dans l'ordre dans lequel ils apparaissent, des différences notables entre les couches apparaissent. Nous obtenons les courbes ci-dessous :
 
