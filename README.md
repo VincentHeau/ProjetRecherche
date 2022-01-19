@@ -200,11 +200,11 @@ Sur ce graphe, on observe que l'influence du taux de suppression sur le volume t
 Enfin, il est intéressant de noter que pour la zone Périphérique, l'erreur de 5% sur le volume peut être atteinte pour un taux de suppression faible. Cela est lié au fait que les bâtiments sont plus petits et moins hauts dans cette zone, et donc que les perturbations identiques aux autres zones ont plus de répercutions.
 
 ### 3.8 Commentaires sur les autres indicateurs et perturbations
-Pour ce qui est de la fusion voir le markdown correspondant dans le dossier Python/Perturbation. Les fonctions de calcul des distances Bati-Bati et distance Bati-Route sont également présentes dans ce fichier mais elles utilisent Arcpy (Arcgis) et les perturbations que nous avons implémentées ne sont pas pertinentes avec ces indicateurs.
+Pour ce qui est de la fusion, voir le markdown correspondant dans le dossier Python/Perturbation. Les fonctions de calcul des distances Bati-Bati et Bati-Route sont également présentes dans ce fichier, mais elles utilisent Arcpy (Arcgis). Or, les perturbations que nous avons implémentées ne sont pas pertinentes avec ces indicateurs.
 
 ## 4. Librairies et outils utilisés pour le développement
 
-Les logiciels et ressources suivants ont été utilisés pour le développement du projet:
+Les logiciels et ressources suivants ont été utilisés pour le développement du projet :
 
 * [Spyder] (https://www.spyder-ide.org/) - Editeur de code
 * [Shapely] (https://pypi.org/project/Shapely/) - Géométrie des polygones
