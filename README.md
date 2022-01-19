@@ -115,8 +115,8 @@ Il est intéressant d'observer les résulats en particulier pour la zone Centre 
 ![Aire en fonction de la suppression de bâtiments dans l'ordre des aires croissantes](/Annexes/Autres/sources_bdtopo.png "Sources des données BD TOPO")
 ** Sources des données BD TOPO **
 
-On constate que les données BD TOPO présentent plus de bâtiments que les données OSM pour une zone similaire (460 pour BD TOPO contre 388 pour OSM dans la zone centre). Comme on le voit sur l'échantillon de zone présenté ci-dessus, les bâtiments OSM recoupent de nombreux bâtiments IGN. Ainsi les données IGN présentent un découpage plus fin des bâtiments. Cette différence peut s'expliquer en comparant la manière dont sont produites les données
- Comme on le voit dans les figures ci-dessus, les données OSM ne sont pas mises à jour depuis 2009 en ce qui concerne les bâtiments de cet îlot. De plus elles ne sont pas contrôlées contrairement aux données de l'IGN.
+On constate que les données BD TOPO présentent plus de bâtiments que les données OSM pour une zone similaire (460 pour BD TOPO contre 388 pour OSM dans la zone centre). Comme on le voit sur l'échantillon de zone présenté ci-dessus, les bâtiments OSM recoupent de nombreux bâtiments IGN. Ainsi les données IGN présentent un découpage plus fin des bâtiments. Cette différence peut s'expliquer en comparant la manière dont sont produites les données.
+Comme on le voit dans les figures ci-dessus, les données OSM ne sont pas mises à jour depuis 2009 en ce qui concerne les bâtiments de cet îlot. De plus elles ne sont pas contrôlées contrairement aux données de l'IGN.
 
 Bien que ce résultat soit intéressant, il n'a pas vraiment été obtenu par une analyse de sensibilité et n'a pas sa place au milieu des autres résultats. Il est complémentaire à notre étude mais intéressant. 
 
