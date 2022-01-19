@@ -83,7 +83,7 @@ Une perturbation supplémentaire qui a été envisagée correspond à la transla
 ![Résultats pour OSM](/Annexes/Autres/Formfactor_OSM.png "Résulats sur le facteur de forme pour OSM")
 
 Tout d'abord, les courbes sont décroissantes : plus l'erreur de positionnement est importante, plus le facteur de forme sera petit. Cela s'explique par le fait que les géométries obtenues sont de plus en plus tordues, et les angles deviennent très aigus ou obtus. Les bâtiments sont alors moins compacts, et leur facteur de forme diminue.
-Les exemples présentés dans le fichier [interpretation_formfactor.md](/Annexes/FormFactor/interpretation_formfactor.md) permettent de bien le visualiser
+Les exemples présentés dans le fichier [interpretation_formfactor.md](/Annexes/FormFactor/interpretation_formfactor.md) permettent de bien le visualiser.
 Le facteur de forme est plus grand pour la zone périphérique, car les bâtiments sont originellement plus carrés que ceux du centre-ville.
 En zone périphérique, le modèle de logement est celui des maisons pavillonaires, ce qui diffère avec les barres d'immeubles du centre-ville.
 
