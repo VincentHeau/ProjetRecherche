@@ -179,10 +179,10 @@ Pour les trois zones, les nappes se ressemblent, mais malgré les ressemblances,
 |    Modification de géométrie   | 1.5          | 1.5    | 1.5   |
 | Rapport d'erreur sur le volume | 0.01         | 0.002  | 0.003 |
 
-On observe que si l'erreur sur le volume est sensiblement la même à paramètres égaux pour les zones Centre et Mixte, il existe une différence notable en ce qui concerne la zone Périphérique où l'on peut observer un rapport d'erreur sur le volume bien plus important. 
-Cela est lié au fait que le volume prend en compte la hauteur des bâtiments. Or la moyenne pour la modification de géométrie s'applique de la même manière sur les sommets des bâtiments que sur leur hauteur. Comme les bâtiments de la zone Périphérique sont généralement des maisons pavillonaires, alors la perturbation appliquée sur la hauteur entraîne une plus forte erreur que sur les grands immeubles des zones Centre et Mixte. 
+On observe que si l'erreur sur le volume est sensiblement la même à paramètres égaux pour les zones Centre et Mixte, il existe une différence notable en ce qui concerne la zone Périphérique, où l'on peut observer un rapport d'erreur sur le volume bien plus important. 
+Cela est lié au fait que le volume prend en compte la hauteur des bâtiments. Or, la moyenne pour la modification de géométrie s'applique de la même manière sur les sommets des bâtiments que sur leur hauteur. Comme les bâtiments de la zone Périphérique sont généralement des maisons pavillonaires, alors la perturbation appliquée sur la hauteur entraîne une plus forte erreur que sur les grands immeubles des zones Centre et Mixte. 
 
-*Ce résultat certes intéressant n'est malgré tout pas un résultat sur la qualité des données.*
+*Ce résultat, certes intéressant, n'est malgré tout pas un résultat sur la qualité des données.*
 
 ### 3.7 Volume avec modification de géométrie et suppression de bâtiments
 ![Volume/ModifgeomSup](Annexes/Autres/volume_suppression&modification_zonecentre.png "Volume en fonction de la suppression et modification de bâtiments (Zone Centre)")
