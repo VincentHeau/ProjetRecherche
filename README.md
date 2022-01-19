@@ -132,7 +132,7 @@ L'intéret principal d'effectuer cette modification de géométrie est de pouvoi
 
 Malheureusement, on n'observe aucune différence majeure entre les nappes de chaleur OSM et BD TOPO. On le voit sur la troisième nappe de chaleur (nappe des différences). On peut simplement observer que l'erreur sur l'aire est croissante plus la modification de géométrie augmente. Avec un écart-type sigma plus grand que 1, on peut obtenir des erreurs plus importantes tout en gardant une moyenne Mu plus faible.
 
-En conclusion ces résultats ne sont pas forcément concluant pour comparer la qualité des données OSM et BD TOPO.
+En conclusion ces résultats ne sont pas forcément concluant pour comparer la qualité des données OSM et BD TOPO, en particulier si l'on reste dans la zone de perturbation réaliste où la moyenne et l'écart-type sont relativement faibles.
 
 Ci-dessous, voici les résultats pour les autres zones :
 
