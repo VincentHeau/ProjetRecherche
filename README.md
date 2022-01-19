@@ -104,7 +104,7 @@ Ainsi, avec cette méthode, plus le taux de suppression augmente, plus nous supp
 
 Il est intéressant d'observer les résulats en particulier pour la zone Centre en bleu sur les courbes. En effet, on observe que pour cette zone, la décroissance est plus rapide pour les données OSM que pour les données BD TOPO.
 
-**Comment expliquer ces différences entre les courbes des données OSM et BD TOPO?**
+**Comment expliquer ces différences entre les courbes des données OSM et BD TOPO ?**
 
 ![Aire en fonction de la suppression de bâtiments dans l'ordre des aires croissantes](/Annexes/Autres/comparaison_airesup.png "Comparaison OSM-BDTOPO au niveau de la zone Centre")
 ** Comparaison entre les données OSM et les données BD TOPO sur la zone Centre **
