@@ -212,14 +212,14 @@ Les logiciels et ressources suivants ont été utilisés pour le développement 
 * [Arcpy](https://desktop.arcgis.com/fr/arcmap/10.3/analyze/arcpy/what-is-arcpy-.htm) - Module Python Arcgis
 
 Pour les couches de données
-* [BD TOPO] (www.ign.fr)
-* [OSM] (https://www.openstreetmap.org)
+* [BD TOPO](www.ign.fr)
+* [OSM](https://www.openstreetmap.org)
 
 ## 5. Versions
 0.6
 
 
 ## 6. Auteurs
-* **Vincent HEAU** [VincentHeau] (https://github.com/VincentHeau)
-* **Tristan FILLON** [TFillon] (https://github.com/TFillon)
-* **Félix BAL** [fe73] (https://github.com/fe73)
+* **Vincent HEAU** [VincentHeau](https://github.com/VincentHeau)
+* **Tristan FILLON** [TFillon](https://github.com/TFillon)
+* **Félix BAL** [fe73](https://github.com/fe73)
