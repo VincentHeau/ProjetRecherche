@@ -191,7 +191,7 @@ Cela est lié au fait que le volume prend en compte la hauteur des bâtiments. O
 ![Volume/ModifgeomSup](Annexes/Autres/volume_suppression&modification_zonemixte.png "Volume en fonction de la suppression et modification de bâtiments (Zone Mixte)")
 **Pour la zone Mixte**
 
-![Volume/ModifgeomSup](Annexes/Autres/volume_suppression&modification_zoneperi.png "Volume en fonction de la suppression et modification de bâtiments (Zone Périphérique)")
+![Volume/ModifgeomSup](Annexes/Autres/volume_modification_suppression_zoneperi.png "Volume en fonction de la suppression et modification de bâtiments (Zone Périphérique)")
 **Pour la zone Mixte**
 
 Comme on l'observe ci-dessus, nous avons fait le choix d'afficher ici le résultat sur la Zone Centre de Toulouse. Pour les autres zones, le comportement est le même.
