@@ -56,7 +56,7 @@ Les résultats sont présents dans le dossier *Annexes*. Les fichiers html se r�
 ## 2. Indicateurs sélectionnés et perturbations
 Les indicateurs ont été choisis parmi ceux du projet [OrbisGeoclimate](https://github.com/orbisgis/geoclimate/wiki/Output-data). Nous avons entre autre implémenté les suivants :
 
-* **FormFactor** ou facteur de forme. Il s'agit de l'aire d'un bâtiment divisée par son périmètre au carré. Pour plus de renseignements sur cet indicateur, voir [interpretation_formfactor.md](/Annexes/FormFactor/interpretation_formfactor.md) )
+* **FormFactor** ou facteur de forme. Il s'agit de l'aire d'un bâtiment divisée par son périmètre au carré. Pour plus de renseignements sur cet indicateur, voir [interpretation_formfactor.md] (/Annexes/FormFactor/interpretation_formfactor.md).
 
 * **Aire**. Aire des bâtiments de la couche -- somme des aires des bâtiments de la couche.
  
