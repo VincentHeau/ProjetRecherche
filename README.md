@@ -56,7 +56,7 @@ Les résultats sont présents dans le dossier *Annexes*. Les fichiers html se r�
 ## 2. Indicateurs sélectionnés et perturbations
 Les indicateurs ont été choisis parmi ceux du projet [OrbisGeoclimate](https://github.com/orbisgis/geoclimate/wiki/Output-data). Nous avons entre autre implémenté les suivants :
 
-* **FormFactor** ou facteur de forme. Il s'agit de l'aire d'un bâtiment divisée par son périmètre au carré. Pour plus de renseignements sur cet indicateur, voir [interpretation_formfactor.md]. (/Annexes/FormFactor/interpretation_formfactor.md)
+* **FormFactor** ou facteur de forme. Il s'agit de l'aire d'un bâtiment divisée par son périmètre au carré. Pour plus de renseignements sur cet indicateur, voir [interpretation_formfactor.md](/Annexes/FormFactor/interpretation_formfactor.md).
 
 * **Aire**. Aire des bâtiments de la couche -- somme des aires des bâtiments de la couche.
  
@@ -64,7 +64,7 @@ Les indicateurs ont été choisis parmi ceux du projet [OrbisGeoclimate](https:/
 
 Pour chaque indicateur, on peut trouver des perturbations intéressantes à appliquer pour effectuer ensuite une analyse de sensibilité. Le tableau ci-dessous récapitule les choix que nous avons effectués.
 
-Pour le fonctionnement des codes des perturbations, voir le fichier [explication.md]. (/python/perturbations/explication.md)
+Pour le fonctionnement des codes des perturbations, voir le fichier [explication.md](/python/perturbations/explication.md).
 
 |   Tableau des couples  Indicateur - Perturbation  |                          | Facteur de Forme |     Aire      | Volume  | Distance  Bati-Bati | Distance  Bati-Route |
 |:-------------------------------------------------:|--------------------------|------------------|:-------------:|---------|:-------------------:|----------------------|
