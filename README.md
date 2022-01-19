@@ -194,7 +194,7 @@ Cela est lié au fait que le volume prend en compte la hauteur des bâtiments. O
 ![Volume/ModifgeomSup](Annexes/Autres/volume_modification_suppression_zoneperi.png "Volume en fonction de la suppression et modification de bâtiments (Zone Périphérique)")
 **Pour la zone Périphérique**
 
-Comme on l'observe ci-dessus, nous avons fait le choix d'afficher ici le résultat sur la Zone Centre de Toulouse. Pour les autres zones, le comportement est le même.
+Comme on l'observe ci-dessus, nous avons fait le choix d'afficher le résultat sur la Zone Centre de Toulouse. Pour les autres zones, le comportement est le même.
 Sur ce graphe, on observe que l'influence du taux de suppression sur le volume total de la couche de bâtiments est bien plus prépondérante que celle de la modification de géométrie. Si l'on s'intéresse à **l'intersection** entre le plan qui correspond à 5% d'erreur et la nappe obtenue, on a une légère courbure, que l'on expliquait en 2D avec les nappes de chaleur précédentes. Cependant malgré cela, on constate tout de même la forte influence du taux de suppression, *il est prépondérant*. 
 
 Enfin, il est intéressant de noter que pour la zone périphérique, l'erreur de 5% sur le volume peut être atteinte pour un taux de suppression faible. Cela est lié au fait que les bâtiments sont plus petits et moins hauts en zone périphérique et donc que les perturbations identiques aux autres zones ont plus de répercutions.
