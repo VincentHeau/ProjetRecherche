@@ -50,7 +50,7 @@ Ci-dessous, une carte présentant les zones utilisées.
 Le code de notre projet se situe dans le dossier *python*. 
 A l'ouverture du dossier *python*, on trouve un code par indicateur ainsi que des dossiers *perturbations* et *traitement*. Ils comportent des codes réutilisables, effectuant des traitements sur les fichiers JSON correspondant aux couches précédentes.
 
-Les résultats sont présents dans le dossier *Annexes*. Les fichiers html se répartissent dans les dossiers *Aire*, *Volume* et *Form Factor* tandis que le dossier *Autre* est conctitué de captures d'écran servant notamment pour ce document.
+Les résultats sont présents dans le dossier *Annexes*. Les fichiers html se répartissent dans les dossiers *Aire*, *Volume* et *Form Factor* tandis que le dossier *Autre* est constitué de captures d'écran servant notamment pour ce document.
 
 
 ## 2. Indicateurs sélectionnés et perturbations
