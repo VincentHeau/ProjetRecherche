@@ -55,9 +55,9 @@ A l'ouverture du dossier *python*, on trouve un code par indicateur ainsi que de
 Les indicateurs ont été choisis parmi ceux du projet [OrbisGeoclimate](https://github.com/orbisgis/geoclimate/wiki/Output-data). Nous avons entre autre implémenté les suivants :
 
 * **FormFactor** ou facteur de forme. Il s'agit de l'aire d'un bâtiment divisée par son périmètre au carré. Pour plus de renseignements sur cet indicateur, voir [interpretation_formfactor.md](/Annexes/FormFactor/interpretation_formfactor.md) )
-* 
+
 * **Aire**. Aire des bâtiments de la couche -- somme des aires des bâtiments de la couche.
-* 
+ 
 * **Volume**. Volume des bâtiments de la couche -- somme des volumes des bâtiments de la couche.
 
 Pour chaque indicateur, on peut trouver des perturbations intéressantes à appliquer pour effectuer ensuite une analyse de sensibilité. Le tableau ci-dessous récapitule les choix que nous avons effectués.
@@ -86,18 +86,47 @@ Le résultat du calcul de cet indicateur après modification de la géométrie e
       
 ### 3.2 Aire et suppression de bâtiments
 ![Aire en fonction de la suppression de bâtiments](/Annexes/Autres/aire_suppression.png "Comparaison OSM-BDTOPO pour la suppression de bâtiments")
+On observe des courbes linéaires, ainsi, lorsque l'on supprime un certain pourcentage de bâtiments, il en résulte une diminution du rapport entre l'aire obtenue après suppression et l'aire initiale. C'est une relation de proportionnalité qui n'est malheureusement pas intéressante puisqu'elle peut se démontrer mathématiquement.
 
+Cependant nous avons remarqué que nous pouvions faire ressortir des différences entre les sources de données en choisissant l'ordre dans lequel on supprime les bâtiments. En effet, en ordonnant les bâtiments selon leurs aires croissantes, et en supprimant ces derniers dans l'ordre dans lequel ils apparaissent, des différences notables entre les couches apparaissent. Nous obtenons les courbes ci-dessous :
+
+![Aire en fonction de la suppression de bâtiments dans l'ordre des aires croissantes](/Annexes/Autres/aire_expo.png "Comparaison OSM-BDTOPO pour la suppression de bâtiments dans l'ordre des aires croissantes")
+
+Ainsi, avec cette méthode, plus le taux de suppression augmente, plus nous supprimons des gros bâtiments.Les bâtiments les plus petits sont supprimés en premier d'où une décroissance faible pour des taux de suppression faibles. Ensuite, quand le taux de suppression augmente, la pente des courbes augmente car la suppression concerne plus particulièrement les gros bâtiments. 
+
+Il est intéressant d'observer les résulats en particulier pour la zone Centre en bleu sur les courbes. En effet, on observe que pour la zone centre, la décroissance est plus rapide pour les données OSM que pour les données BD TOPO. \\
+
+**Comment expliquer ces différences entre les courbes des données OSM et BD TOPO?**
+
+![Aire en fonction de la suppression de bâtiments dans l'ordre des aires croissantes](/Annexes/Autres/comparaison_airesup.png "Comparaison OSM-BDTOPO au niveau de la zone Centre")
+** Comparaison entre les données OSM et les données BD TOPO sur la zone Centre **
+
+![Aire en fonction de la suppression de bâtiments dans l'ordre des aires croissantes](/Annexes/Autres/source_osm.png "Sources des données OSM")
+** Sources des données OSM **
+
+![Aire en fonction de la suppression de bâtiments dans l'ordre des aires croissantes](/Annexes/Autres/source_bdtopo.png "Sources des données BD TOPO")
+** Sources des données BD TOPO **
+
+On constate que les données BD TOPO présentent plus de bâtiments que les données OSM (460 pour BD TOPO contre 388 pour OSM dans la zone centre) pour une zone similaire. Comme on le voit sur l'échantillon de zone présenté ci-dessus, les bâtiments OSM recoupent de nombreux bâtiments IGN. Ainsi les données IGN présentent un découpage plus fin des bâtiments. Cette différence peut s'expliquer en comparant la manière dont sont produites les données
+ Comme on le voit dans les figures ci-dessus, les données OSM ne sont pas mises à jour depuis 2009 en ce qui concerne les bâtiments de cet îlot. De plus elles ne sont pas contrôlées contrairement aux données de l'IGN.
+
+Bien que ce résultat soit intéressant, il n'a pas vraiment été obtenu par une analyse de sensibilité et n'a pas sa place au milieu des autres résultats. Il est complémentaire à notre étude mais intéressant. 
 
 
 ### 3.3 Aire et modification de géométrie
 ![Aire/Modifgeom](Annexes/Autres/aire_modification.png "Nappe de chaleur présentant le taux d'erreur sur l'aire en fonction de la modification des bâtiments")
 
-L'intéret principal d'effectuer cette modification de géométrie est de pouvoir détecter des différences dans les géométries que l'on ne perçoit pas forcément lors d'une visualisation sous un SIG. En effet, on peut facilement imaginer que pour une façade droite (segment entre deux sommets du polygone), une source de données ne représente qu'un segment entre deux points, tandis qu'une autre représente une ligne brisée avec des angles proches de 180°(donc proche d'une droite).
-**La modification de géométrie peut faire ressortir ces sommets "invisibles"**
+Sur cette nappe de chaleur, l'axe des abscisses indique l'écart-type choisi pour notre modification des bâtiments tandis que la moyenne figure en ordonnée. Ainsi chaque couple (x,y) représente les paramètres selon lesquels la couche d'entrée est modifiée. La modification se fait comme expliquée dans les parties précédentes.
+La couleur dont l'échelle figure à droite de la courbe représente un rapport d'erreur sur l'aire. Pour chaque couple (x,y), on modifie 10 fois la couche d'entrée selon ces paramètres et pour chacune de ces modifications, on calcule l'aire totale de la couche modifiée que l'on divise par l'aire totale initiale. La moyenne de ces 10 tirages aléatoires permet d'obtenir la valeur z représentée par une couleur. La nappe représentée ci-dessus correspond aux données de la zone Centre. 
+Le premier affichage est celui de la BD TOPO, le second celui d'OSM et enfin, nous avons une nappe des différences entre les deux précédentes.
 
-Malheureusement, on n'observe aucune différence majeure entre les nappes de chaleur OSM et BD TOPO. On le voit sur la troisième nappe de chaleur (nappe des différences). On peut simplement observer que l'erreur sur l'aire est croissante plus la modification de géométrie augmente. Avec un écart-type sigma plus grande que 1, on peut obtenir des erreurs plus importantes tout en gardant une moyenne Mu plus faible.
+L'intéret principal d'effectuer cette modification de géométrie est de pouvoir détecter des différences dans les géométries que l'on ne perçoit pas forcément lors d'une visualisation sous un SIG. C'était une des attentes avant d'implémenter les algorithmes. En effet, on peut facilement imaginer que pour une façade droite (segment entre deux sommets du polygone), une source de données ne représente qu'un segment entre deux points, tandis qu'une autre représente une ligne brisée avec des angles proches de 180°(donc proche d'une droite).
+
+Malheureusement, on n'observe aucune différence majeure entre les nappes de chaleur OSM et BD TOPO. On le voit sur la troisième nappe de chaleur (nappe des différences). On peut simplement observer que l'erreur sur l'aire est croissante plus la modification de géométrie augmente. Avec un écart-type sigma plus grand que 1, on peut obtenir des erreurs plus importantes tout en gardant une moyenne Mu plus faible.
 
 En conclusion ces résultats ne sont pas forcément concluant pour comparer la qualité des données OSM et BD TOPO.
+
+Ci_dessous, 
 
 ### 3.4 Aire avec modification de géométrie et suppression de bâtiments
 
