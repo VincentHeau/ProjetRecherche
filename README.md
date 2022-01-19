@@ -39,9 +39,9 @@ En ce qui concerne les codes pour les paramètres **Facteur de forme**, **Aire**
 
 Zones sélectionnées :
 
-      1. Zone Centre ( Zone située au centre-ville de Toulouse 400m sur 400m )
-      2. Zone Mixte ( Zone située juste à l'extérieur du centre-ville de Toulouse 400m sur 400m )
-      3. Zone Périphérique ( Zone située en banlieue pavillonaire de Toulouse 400m sur 400m )
+      1. Zone Centre (Zone située au centre-ville de Toulouse 400m sur 400m)
+      2. Zone Mixte (Zone située juste à l'extérieur du centre-ville de Toulouse 400m sur 400m)
+      3. Zone Périphérique (Zone située en banlieue pavillonaire de Toulouse 400m sur 400m)
 
 
 Ci-dessous, une carte présentant les zones utilisées
